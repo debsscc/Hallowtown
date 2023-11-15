@@ -1,35 +1,44 @@
 extends KinematicBody2D
 
 #Variaveis
-var velocity : Vector2 = Vector2()
-var direction : Vector2 = Vector2()
+var speed = 50
+var motion = Vector2.ZERO
 
 #Movimento de controle do player
 
-func read_input():
-	velocity = Vector2()
-	
-	if Input.is_action_pressed("up"):
-		velocity.y -= 1
-		direction = Vector2(0, -1)
-	
-	if Input.is_action_pressed("down"):
-		velocity.y += 1
-		direction = Vector2(0, 1)
-		
+func _physics_process(delta):
 	if Input.is_action_pressed("right"):
-		velocity.x += 1
-		direction = Vector2(1, 0)
+		motion.x = speed
+		motion.y = 0
 		
-	if Input.is_action_pressed("left"):
-		velocity.x -= 1
-		direction = Vector2(-1,0)
+		$AnimatedSprite.play("sidewalk")
+		$AnimatedSprite.flip_h = false
 		
-	velocity = velocity.normalized()
-	velocity = move_and_slide(velocity * 200)
+	elif Input.is_action_pressed("left"):
+		motion.x = -speed
+		motion.y = 0
+		
+		$AnimatedSprite.play("sidewalk")
+		$AnimatedSprite.flip_h = true
+		
+	elif Input.is_action_pressed("down"):
+		motion.y = speed
+		motion.x = 0
+		
+		$AnimatedSprite.play("down_walk")
+		
+	elif Input.is_action_pressed("up"):
+		motion.y = -speed
+		motion.x = 0
+		
+		$AnimatedSprite.play("up_walk")
+		
+	else:
+		$AnimatedSprite.play("default")
+		
+		motion.x = 0
+		motion.y = 0
+	
+	move_and_slide(motion)
 	
 # move_and_slide é uma função construtora da Godot que aplica o movimento ao personagem mas também o processo físico que checa as colisões. (2 funções combinadas)
-
-	
-func _physics_process(_delta):
-	read_input()
