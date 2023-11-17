@@ -9,27 +9,26 @@ var motion = Vector2.ZERO
 func _physics_process(delta):
 	if Input.is_action_pressed("right"):
 		motion.x = speed
-		motion.y = 0
+
 		
-		$AnimatedSprite.play("sidewalk")
+		$AnimatedSprite.play("sidewalk-dir")
 		$AnimatedSprite.flip_h = false
 		
 	elif Input.is_action_pressed("left"):
 		motion.x = -speed
-		motion.y = 0
+
 		
-		$AnimatedSprite.play("sidewalk")
-		$AnimatedSprite.flip_h = true
+		$AnimatedSprite.play("sidewalk-esq")
 		
 	elif Input.is_action_pressed("down"):
 		motion.y = speed
-		motion.x = 0
+
 		
 		$AnimatedSprite.play("down_walk")
 		
 	elif Input.is_action_pressed("up"):
 		motion.y = -speed
-		motion.x = 0
+
 		
 		$AnimatedSprite.play("up_walk")
 		
