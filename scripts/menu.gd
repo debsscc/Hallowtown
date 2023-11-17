@@ -1,7 +1,8 @@
 extends Control
 
-func _ready():
-	pass # Replace with function body.
+func _physics_process(delta):
+	if Input.is_action_pressed("enter"):
+		get_tree().change_scene("res://scenes/main.tscn")
 
 
 func _on_Button_pressed():
