@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Watering Can.png-3ec56465dbe2a9e3f522a3f47733575b.stex"
+path="res://.import/Buy Final.png-064e39d6222df904a83929528bda2ed7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Items/Watering Can.png"
-dest_files=[ "res://.import/Watering Can.png-3ec56465dbe2a9e3f522a3f47733575b.stex" ]
+source_file="res://assets/Imagesbuy/Buy Final.png"
+dest_files=[ "res://.import/Buy Final.png-064e39d6222df904a83929528bda2ed7.stex" ]
 
 [params]
 

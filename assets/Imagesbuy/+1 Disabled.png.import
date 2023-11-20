@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/StrawberrySeeds.png-e3f0bd7cafb1585de65f234b06f710a9.stex"
+path="res://.import/+1 Disabled.png-b0e7e70885eae507d4b2985fe51c68da.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Items/StrawberrySeeds.png"
-dest_files=[ "res://.import/StrawberrySeeds.png-e3f0bd7cafb1585de65f234b06f710a9.stex" ]
+source_file="res://assets/Imagesbuy/+1 Disabled.png"
+dest_files=[ "res://.import/+1 Disabled.png-b0e7e70885eae507d4b2985fe51c68da.stex" ]
 
 [params]
 
