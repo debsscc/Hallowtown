@@ -21,4 +21,6 @@ margin_right = 609.0
 margin_bottom = 497.0
 mouse_default_cursor_shape = 2
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
