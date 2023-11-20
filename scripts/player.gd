@@ -1,35 +1,60 @@
 extends KinematicBody2D
 
 #Variaveis
-var velocity : Vector2 = Vector2()
-var direction : Vector2 = Vector2()
+export var moveSpeed = 100
+var collision = null
+var running = 1
 
 #Movimento de controle do player
 
-func read_input():
-	velocity = Vector2()
+func _physics_process(delta):
+	var moveVector = Vector2()
 	
-	if Input.is_action_pressed("up"):
-		velocity.y -= 1
-		direction = Vector2(0, -1)
-	
-	if Input.is_action_pressed("down"):
-		velocity.y += 1
-		direction = Vector2(0, 1)
-		
 	if Input.is_action_pressed("right"):
-		velocity.x += 1
-		direction = Vector2(1, 0)
+		moveVector.x += 1
 		
 	if Input.is_action_pressed("left"):
-		velocity.x -= 1
-		direction = Vector2(-1,0)
+		moveVector.x -= 1
 		
-	velocity = velocity.normalized()
-	velocity = move_and_slide(velocity * 200)
+	if Input.is_action_pressed("down"):
+		moveVector.y += 1
+		
+	if Input.is_action_pressed("up"):
+		moveVector.y -= 1
 	
-# move_and_slide é uma função construtora da Godot que aplica o movimento ao personagem mas também o processo físico que checa as colisões. (2 funções combinadas)
+	if moveVector.x == 0:
+		if moveVector.y < 0:
+			$AnimatedSprite.play("up_walk")
+		elif moveVector.y > 0:
+			$AnimatedSprite.play("down_walk")
+	else:
+		if moveVector.x > 0:
+			$AnimatedSprite.play("sidewalk-dir")
+		elif moveVector.x < 0:
+			$AnimatedSprite.play("sidewalk-esq")
+	
+	if (moveVector.x == 0 and moveVector.y == 0):
+		$AnimatedSprite.play("default")
 
-	
-func _physics_process(_delta):
-	read_input()
+# move_and_slide é uma função construtora da Godot que aplica o movimento ao personagem mas também o processo físico que checa as colisões. (2 funções combinadas)
+#Diferente do anterior move_and_slide, o move_and_collide deixa o personagem estatico ao colidir.
+
+	#Verifica se a tecla de corrida está sendo pressionada
+	if Input.is_action_pressed("run"):
+		running = 2
+		print("Run key pressed")
+
+	else:
+		running = 1
+		
+	#Atualiza a velocidade de acordo com a condição de corrida
+	if running: 
+		moveVector *= 2 #Dobra a velocidade se a corrida estiver ativa
+		
+		print("Running:", running, "Velocity doubled")
+  # Mensagem de depuração
+	collision = move_and_collide(moveVector.normalized() * delta * moveSpeed * running)
+
+
+
+
