@@ -42,7 +42,6 @@ func _physics_process(delta):
 	#Verifica se a tecla de corrida está sendo pressionada
 	if Input.is_action_pressed("run"):
 		running = 2
-		print("Run key pressed")
 
 	else:
 		running = 1
@@ -51,7 +50,6 @@ func _physics_process(delta):
 	if running: 
 		moveVector *= 2 #Dobra a velocidade se a corrida estiver ativa
 		
-		print("Running:", running, "Velocity doubled")
   # Mensagem de depuração
 	collision = move_and_collide(moveVector.normalized() * delta * moveSpeed * running)
 
