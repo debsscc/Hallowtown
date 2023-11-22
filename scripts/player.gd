@@ -4,6 +4,7 @@ extends KinematicBody2D
 export var moveSpeed = 100
 var collision = null
 var running = 1
+var gold = 0
 
 #Movimento de controle do player
 
