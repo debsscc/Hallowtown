@@ -4,7 +4,10 @@ extends KinematicBody2D
 export var moveSpeed = 100
 var collision = null
 var running = 1
-var gold = 0
+
+onready var Inventory = get_node("UI/Inventory")
+
+onready var ShopMenu = get_node("/root/main/Shop Menu")
 
 #Movimento de controle do player
 
