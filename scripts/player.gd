@@ -5,9 +5,10 @@ export var moveSpeed = 100
 var collision = null
 var running = 1
 
-onready var Inventory = get_node("UI/Inventory")
-
-onready var ShopMenu = get_node("/root/main/Shop Menu")
+onready var Game = get_node("/root/main")
+onready var Inventory = get_node("UI/Inventory") 
+onready var EnergyBar = get_node("UI/Energy Bar")
+onready var ShopMenu = get_node("/root/main/Loja/Shop Menu")
 
 #Movimento de controle do player
 
