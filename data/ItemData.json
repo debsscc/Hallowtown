@@ -1,0 +1,17 @@
+{
+	"Hoe": {
+		"ItemCategory": "Tool",
+		"StackSize": 1,
+		"Description": "Ferramenta utilizada para lavrar a terra."
+	},
+	"Watering Can": {
+		"ItemCategory": "Tool",
+		"StackSize": 1,
+		"Description": "Ferramenta utilizada para regar as plantas."
+	},
+	"Axe": {
+		"ItemCategory": "Seed",
+		"StackSize": 99,
+		"Description": "Sementes para cultivar Guarana."
+	},
+}
