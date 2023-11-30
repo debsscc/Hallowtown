@@ -9,9 +9,9 @@
 		"StackSize": 1,
 		"Description": "Ferramenta utilizada para regar as plantas."
 	},
-	"Axe": {
+	"Guarana Seed": {
 		"ItemCategory": "Seed",
 		"StackSize": 99,
-		"Description": "Sementes para cultivar Guarana."
+		"Description": "Semente que origina o Guarana."
 	},
 }
