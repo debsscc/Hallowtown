@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/arvores.png-fd22089a0c56bc15446695ec305c6780.stex"
+path="res://.import/arvores editado.png-60472aef221c19ed71cbd1905464cdd8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/arvores.png"
-dest_files=[ "res://.import/arvores.png-fd22089a0c56bc15446695ec305c6780.stex" ]
+source_file="res://assets/Tileset/Objetos/arvores editado.png"
+dest_files=[ "res://.import/arvores editado.png-60472aef221c19ed71cbd1905464cdd8.stex" ]
 
 [params]
 

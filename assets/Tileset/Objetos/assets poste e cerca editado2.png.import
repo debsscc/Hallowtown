@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/assets poste e cerca editado2.png-47c7f14801020e2d17a9c817d74dc3d1.stex"
+path="res://.import/assets poste e cerca editado2.png-1b530d04dcec0fdb08410ad1408c7926.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tileset/assets poste e cerca editado2.png"
-dest_files=[ "res://.import/assets poste e cerca editado2.png-47c7f14801020e2d17a9c817d74dc3d1.stex" ]
+source_file="res://assets/Tileset/Objetos/assets poste e cerca editado2.png"
+dest_files=[ "res://.import/assets poste e cerca editado2.png-1b530d04dcec0fdb08410ad1408c7926.stex" ]
 
 [params]
 

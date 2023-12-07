@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/guarana.png-efbb3352bd44aaf11f4a2c423dd580c2.stex"
+path="res://.import/guarana.png-d904ecbf2cb032a518d1978b7e6e5102.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/guarana.png"
-dest_files=[ "res://.import/guarana.png-efbb3352bd44aaf11f4a2c423dd580c2.stex" ]
+source_file="res://assets/Plants/guarana.png"
+dest_files=[ "res://.import/guarana.png-d904ecbf2cb032a518d1978b7e6e5102.stex" ]
 
 [params]
 

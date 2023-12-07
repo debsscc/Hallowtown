@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/arvores editado.png-a993f6c0fe621aed60d8154b27650f9b.stex"
+path="res://.import/assets poste e cerca.png-982420b28d030e1121d76e281d1a23d1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tileset/arvores editado.png"
-dest_files=[ "res://.import/arvores editado.png-a993f6c0fe621aed60d8154b27650f9b.stex" ]
+source_file="res://assets/Tileset/Objetos/assets poste e cerca.png"
+dest_files=[ "res://.import/assets poste e cerca.png-982420b28d030e1121d76e281d1a23d1.stex" ]
 
 [params]
 

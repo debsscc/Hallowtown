@@ -9,16 +9,15 @@ const NUM_HOTBAR_SLOTS = 10
 
 var inventory = {
 	0: ["Watering Can", 1], #[item_name, quantity_item]
-	1: ["Hoe", 1],
-	2: ["Guarana Seed", 39],
-	3: ["Guarana Seed", 90],
+	1: ["Guarana Seed", 90],
+	2: ["Guarana Seed", 12],
+	3: ["Guarana Seed", 28],
+	4: ["Guarana Seed", 1],
 }
 
 var hotbar = {
 	0: ["Watering Can", 1], #[item_name, quantity_item]
-	1: ["Hoe", 1],
-	2: ["Guarana Seed", 39],
-	3: ["Guarana Seed", 90],
+	1: ["Guarana Seed", 20],
 }
 
 var active_item_slot = 0
@@ -75,7 +74,47 @@ func active_item_scroll_down():
 
 func active_item_scroll_up():
 	if active_item_slot == 0:
-		active_item_slot == NUM_HOTBAR_SLOTS - 1
+		active_item_slot = NUM_HOTBAR_SLOTS -1
 	else:
 		active_item_slot -= 1
+	emit_signal("active_item_updated")
+
+func active_item_1():
+	active_item_slot = 0
+	emit_signal("active_item_updated")
+
+func active_item_2():
+	active_item_slot = 1
+	emit_signal("active_item_updated")
+
+func active_item_3():
+	active_item_slot = 2
+	emit_signal("active_item_updated")
+
+func active_item_4():
+	active_item_slot = 3
+	emit_signal("active_item_updated")
+	
+func active_item_5():
+	active_item_slot = 4
+	emit_signal("active_item_updated")
+
+func active_item_6():
+	active_item_slot = 5
+	emit_signal("active_item_updated")
+
+func active_item_7():
+	active_item_slot = 6
+	emit_signal("active_item_updated")
+
+func active_item_8():
+	active_item_slot = 7
+	emit_signal("active_item_updated")
+
+func active_item_9():
+	active_item_slot = 8
+	emit_signal("active_item_updated")
+
+func active_item_0():
+	active_item_slot = 9
 	emit_signal("active_item_updated")

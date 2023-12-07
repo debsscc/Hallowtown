@@ -25,10 +25,6 @@ func _ready():
 	empty_style.texture = empty_tex
 	filled_style.texture = filled_tex
 	selected_style.texture = selected_tex
-	
-	#if randi() % 2 == 0:
-		#item = ItemClass.instance()
-		#add_child(item)
 	refresh_style()
 
 func refresh_style():
