@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://dialogue/dialog_box.png" type="Texture" id=1]
+[ext_resource path="res://fonts/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://dialogue/balao_dona_morte.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 39
+font_data = ExtResource( 2 )
+
+[node name="TextBox" type="MarginContainer"]
+margin_right = 1137.0
+margin_bottom = 208.0
+script = ExtResource( 3 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_right = 1137.0
+margin_bottom = 208.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 128, 160, 784, 128 )
+patch_margin_left = 32
+patch_margin_top = 96
+patch_margin_right = 32
+patch_margin_bottom = 112
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 1137.0
+margin_bottom = 208.0
+custom_constants/margin_right = 25
+custom_constants/margin_top = 25
+custom_constants/margin_left = 25
+custom_constants/margin_bottom = 25
+
+[node name="Label" type="Label" parent="MarginContainer"]
+margin_left = 25.0
+margin_top = 86.0
+margin_right = 1112.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

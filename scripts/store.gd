@@ -9,3 +9,4 @@ func _on_store_body_entered(body):
 
 func _on_store_body_exited(body):
 	Global.player_in_store = 0
+

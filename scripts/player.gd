@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-#Variaveis
+# Variáveis
 export var moveSpeed = 100
 var collision = null
 var running = 1
@@ -10,23 +10,36 @@ onready var Inventory = get_node("UI/Inventory")
 onready var EnergyBar = get_node("UI/Energy Bar")
 onready var ShopMenu = get_node("/root/main/Loja/Shop Menu")
 
-#Movimento de controle do player
+onready var movementSound = $Som_caminhada
+
+# Função para parar o som de movimento quando não há mais entrada de movimento
+func _stop_movement_sound():
+	if movementSound.is_playing():
+		movementSound.stop()
 
 func _physics_process(delta):
 	var moveVector = Vector2()
-	
+
 	if Input.is_action_pressed("right"):
 		moveVector.x += 1
-		
 	if Input.is_action_pressed("left"):
 		moveVector.x -= 1
-		
 	if Input.is_action_pressed("down"):
 		moveVector.y += 1
-		
 	if Input.is_action_pressed("up"):
 		moveVector.y -= 1
-	
+
+	#Ajusta a taxa de reprodução do som durante a corrida
+	if Input.is_action_pressed("run"):
+		movementSound.pitch_scale = 2.0  # Aumenta a taxa de reprodução para dobrar a velocidade
+	else:
+		movementSound.pitch_scale = 1.0  # Volta para a taxa de reprodução normal
+
+#Toca o som de movimento se algum botão de movimento estiver sendo pressionado
+	if moveVector.length() > 0:
+		if not movementSound.is_playing():
+			movementSound.play()
+
 	if moveVector.x == 0:
 		if moveVector.y < 0:
 			$AnimatedSprite.play("up_walk")
@@ -37,27 +50,29 @@ func _physics_process(delta):
 			$AnimatedSprite.play("sidewalk-dir")
 		elif moveVector.x < 0:
 			$AnimatedSprite.play("sidewalk-esq")
-	
+
 	if (moveVector.x == 0 and moveVector.y == 0):
 		$AnimatedSprite.play("default")
 
-# move_and_slide é uma função construtora da Godot que aplica o movimento ao personagem mas também o processo físico que checa as colisões. (2 funções combinadas)
-#Diferente do anterior move_and_slide, o move_and_collide deixa o personagem estatico ao colidir.
-
-	#Verifica se a tecla de corrida está sendo pressionada
 	if Input.is_action_pressed("run"):
 		running = 2
-
 	else:
 		running = 1
-		
-	#Atualiza a velocidade de acordo com a condição de corrida
-	if running: 
-		moveVector *= 2 #Dobra a velocidade se a corrida estiver ativa
-		
-  # Mensagem de depuração
+
+	moveVector *= 2 * running
+
 	collision = move_and_collide(moveVector.normalized() * delta * moveSpeed * running)
 
+	# Collision with Checkpoint
+	if collision and Input.is_action_pressed("run"):  # Só ajusta a posição se o jogador estiver correndo
+		_on_Area2D_body_entered(collision.collider)
 
+	#Chama a função de parar o som quando não há mais entrada de movimento
+	if moveVector.length() == 0:
+		_stop_movement_sound()
 
-
+# Collision with Checkpoint
+func _on_Area2D_body_entered(body):
+	print("Body entered")
+	if body == $Player:
+		position -= collision.normal * collision.travel

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/slot.gd" type="Script" id=1]
 [ext_resource path="res://scripts/hotbar.gd" type="Script" id=2]
 [ext_resource path="res://tipografias/easvhs.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/UI Player/VIDA.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 outline_size = 1
@@ -106,3 +107,8 @@ margin_right = 421.0
 margin_bottom = 631.0
 custom_fonts/font = SubResource( 1 )
 text = "Text"
+
+[node name="Vida" type="Sprite" parent="."]
+position = Vector2( 1183, 39 )
+scale = Vector2( 0.181937, 0.181937 )
+texture = ExtResource( 4 )

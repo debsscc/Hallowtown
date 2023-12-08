@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/teste.png-3ab7f08a3e311acd132be65eade827e7.stex"
+path="res://.import/abóbora png.png-b27a5df03f6a244ed9f42456dd590102.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/teste.png"
-dest_files=[ "res://.import/teste.png-3ab7f08a3e311acd132be65eade827e7.stex" ]
+source_file="res://assets/Plants/abóbora png.png"
+dest_files=[ "res://.import/abóbora png.png-b27a5df03f6a244ed9f42456dd590102.stex" ]
 
 [params]
 
