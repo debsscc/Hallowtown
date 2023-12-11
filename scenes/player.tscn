@@ -201,28 +201,35 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=43]
-radius = 7.0
-height = 5.0
+radius = 6.0
+height = 4.0
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 14
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 8, -9.24992 )
+position = Vector2( 8, -3.57628e-07 )
 scale = Vector2( 1.17969, 1.17969 )
 frames = SubResource( 56 )
 animation = "sidewalk-esq"
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 2 )
+position = Vector2( 0, 13 )
 shape = SubResource( 43 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 0.5, 0.5 )
+limit_left = -1632
+limit_top = -992
+limit_right = 1632
+limit_bottom = 992
+editor_draw_limits = true
 
 [node name="Som_caminhada" type="AudioStreamPlayer2D" parent="."]
+visible = false
 stream = ExtResource( 7 )
 volume_db = -15.731
