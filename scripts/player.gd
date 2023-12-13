@@ -4,6 +4,7 @@ extends KinematicBody2D
 export var moveSpeed = 100
 var collision = null
 var running = 1
+onready var lastDirection: Vector2 = Vector2.ZERO
 
 onready var Game = get_node("/root/main")
 onready var Inventory = get_node("UI/Inventory") 
@@ -11,6 +12,18 @@ onready var EnergyBar = get_node("UI/Energy Bar")
 onready var ShopMenu = get_node("/root/main/Loja/Shop Menu")
 
 onready var movementSound = $Som_caminhada
+
+func get_animation_from_direction(direction: Vector2) -> String:
+	if direction.y < 0:
+		return "up"
+	elif direction.y > 0:
+		return "down"
+	elif direction.x > 0:
+		return "dir"
+	elif direction.x < 0:
+		return "esq"
+	else:
+		return "default"
 
 # Função para parar o som de movimento quando não há mais entrada de movimento
 func _stop_movement_sound():
@@ -28,12 +41,20 @@ func _physics_process(delta):
 		moveVector.y += 1
 	if Input.is_action_pressed("up"):
 		moveVector.y -= 1
-
+	
+	if moveVector.length() > 0:
+		lastDirection = moveVector.normalized()  # Atualiza a última direção
+	
 	#Ajusta a taxa de reprodução do som durante a corrida
 	if Input.is_action_pressed("run"):
 		movementSound.pitch_scale = 2.0  # Aumenta a taxa de reprodução para dobrar a velocidade
 	else:
 		movementSound.pitch_scale = 1.0  # Volta para a taxa de reprodução normal
+
+	if moveVector.length() == 0:
+		# Deixa o personagem parado na última direção
+		if lastDirection.length() > 0:
+			$AnimatedSprite.play(get_animation_from_direction(lastDirection))
 
 #Toca o som de movimento se algum botão de movimento estiver sendo pressionado
 	if moveVector.length() > 0:
@@ -76,3 +97,5 @@ func _on_Area2D_body_entered(body):
 	print("Body entered")
 	if body == $Player:
 		position -= collision.normal * collision.travel
+
+
