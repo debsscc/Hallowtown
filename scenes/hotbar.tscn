@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/slot.gd" type="Script" id=1]
 [ext_resource path="res://scripts/hotbar.gd" type="Script" id=2]
 [ext_resource path="res://tipografias/easvhs.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://assets/UI Player/VIDA.png" type="Texture" id=4]
+[ext_resource path="res://assets/Item/MOEDA.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 outline_size = 1
@@ -108,7 +109,20 @@ margin_bottom = 631.0
 custom_fonts/font = SubResource( 1 )
 text = "Text"
 
+[node name="ActiveItemLabel2" type="Label" parent="."]
+margin_left = 867.5
+margin_top = 613.5
+margin_right = 896.5
+margin_bottom = 630.5
+custom_fonts/font = SubResource( 1 )
+text = "x99"
+
 [node name="Vida" type="Sprite" parent="."]
-position = Vector2( 1183, 39 )
-scale = Vector2( 0.181937, 0.181937 )
+position = Vector2( 95, 45 )
+scale = Vector2( 0.169373, 0.171711 )
 texture = ExtResource( 4 )
+
+[node name="Moeda" type="Sprite" parent="."]
+position = Vector2( 852.5, 620.5 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 5 )
