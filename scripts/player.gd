@@ -46,8 +46,8 @@ func _physics_process(delta):
 	
 	
 	#Verifica a ação de regar
-	#if Input.is_action_pressed("regando"):
-#$AnimatedSprite.play("rega_default")
+	if Input.is_action_pressed("regando"):
+		$AnimatedSprite.play("rega_dir")
 		#isWatering = true
 	#else:
 	#	isWatering = false
