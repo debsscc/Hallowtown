@@ -1,46 +1,86 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://dialogue/dialog_box.png" type="Texture" id=1]
 [ext_resource path="res://fonts/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://dialogue/balao_dona_morte.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
-size = 39
+size = 28
+outline_color = Color( 0.733333, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
-[node name="TextBox" type="MarginContainer"]
-margin_right = 1137.0
-margin_bottom = 208.0
+[sub_resource type="DynamicFont" id=2]
+size = 23
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "coisinha"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -756, -0.25, 0, 0.25, 0, -756, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.7 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -926, -0.25, 0, 0.25, 0, -926, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.7 )
+}
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Dialog Box" type="ColorRect" parent="."]
+anchor_left = 0.237
+anchor_top = 0.617
+anchor_right = 0.79
+anchor_bottom = 0.936
+margin_left = -15.36
+margin_top = -12.24
+margin_right = -16.2
+margin_bottom = -11.92
 script = ExtResource( 3 )
+dialogPath = "res://dialogue\\Dialog0.json"
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
-margin_right = 1137.0
-margin_bottom = 208.0
-texture = ExtResource( 1 )
-region_rect = Rect2( 128, 160, 784, 128 )
-patch_margin_left = 32
-patch_margin_top = 96
-patch_margin_right = 32
-patch_margin_bottom = 112
+[node name="Name" type="RichTextLabel" parent="Dialog Box"]
+margin_left = 17.0
+margin_top = 10.0
+margin_right = 219.0
+margin_bottom = 42.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+text = "SFASDKFUSDHF"
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-margin_right = 1137.0
-margin_bottom = 208.0
-custom_constants/margin_right = 25
-custom_constants/margin_top = 25
-custom_constants/margin_left = 25
-custom_constants/margin_bottom = 25
+[node name="Text" type="RichTextLabel" parent="Dialog Box"]
+margin_left = 24.0
+margin_top = 57.0
+margin_right = 684.0
+margin_bottom = 184.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 2 )
+text = "Boa tarde querido aluno..."
 
-[node name="Label" type="Label" parent="MarginContainer"]
-margin_left = 25.0
-margin_top = 86.0
-margin_right = 1112.0
-margin_bottom = 121.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 1 )
-align = 1
-valign = 1
+[node name="Indicador" type="Polygon2D" parent="."]
+position = Vector2( -756, -926 )
+scale = Vector2( 1.82162, 2.49309 )
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( 952.559, 621, 933.559, 621, 943.059, 630.5, 947.069, 626.489 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Indicador"]
+anims/coisinha = SubResource( 3 )
+
+[node name="Portrait" type="Sprite" parent="."]
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true

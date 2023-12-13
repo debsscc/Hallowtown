@@ -4,7 +4,9 @@ extends KinematicBody2D
 export var moveSpeed = 100
 var collision = null
 var running = 1
-onready var lastDirection: Vector2 = Vector2.ZERO
+onready var lastDirection: Vector2 = Vector2.ZERO #Variavel para verificar a ultima direção de seta feito pelo jogador
+#var isWatering = false  # Variável para rastrear se o jogador está regando
+
 
 onready var Game = get_node("/root/main")
 onready var Inventory = get_node("UI/Inventory") 
@@ -42,8 +44,17 @@ func _physics_process(delta):
 	if Input.is_action_pressed("up"):
 		moveVector.y -= 1
 	
+	
+	#Verifica a ação de regar
+	#if Input.is_action_pressed("regando"):
+#$AnimatedSprite.play("rega_default")
+		#isWatering = true
+	#else:
+	#	isWatering = false
+	
+	#Atualiza a ultima direção 
 	if moveVector.length() > 0:
-		lastDirection = moveVector.normalized()  # Atualiza a última direção
+		lastDirection = moveVector.normalized() 
 	
 	#Ajusta a taxa de reprodução do som durante a corrida
 	if Input.is_action_pressed("run"):
@@ -55,6 +66,19 @@ func _physics_process(delta):
 		# Deixa o personagem parado na última direção
 		if lastDirection.length() > 0:
 			$AnimatedSprite.play(get_animation_from_direction(lastDirection))
+	
+	#Verifica se ta regando
+	#if isWatering:
+		# Reproduz a animação de regar na última direção
+		#$AnimatedSprite.play("rega_" + get_animation_from_direction(lastDirection))
+	#elif moveVector.length() == 0:
+		# Deixa o personagem parado na última direção
+		#if lastDirection.length() > 0:
+			#$AnimatedSprite.play(get_animation_from_direction(lastDirection))
+	#else:
+		# Toca a animação de movimento conforme a direção
+		#$AnimatedSprite.play(get_animation_from_direction(moveVector))
+
 
 #Toca o som de movimento se algum botão de movimento estiver sendo pressionado
 	if moveVector.length() > 0:
@@ -72,8 +96,6 @@ func _physics_process(delta):
 		elif moveVector.x < 0:
 			$AnimatedSprite.play("sidewalk-esq")
 
-	if (moveVector.x == 0 and moveVector.y == 0):
-		$AnimatedSprite.play("default")
 
 	if Input.is_action_pressed("run"):
 		running = 2
