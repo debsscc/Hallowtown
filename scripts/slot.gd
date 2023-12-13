@@ -2,7 +2,7 @@ extends Panel
 
 var empty_tex = preload("res://assets/UI Player/Inventory/Slot Empty.png")
 var filled_tex = preload("res://assets/UI Player/Inventory/Slot Filled.png")
-var selected_tex = preload("res://assets/UI Player/Inventory/Item Slot Selected Backgorund.png")
+var selected_tex = preload("res://assets/UI Player/Inventory/Item Slot Selected.png")
 
 var empty_style: StyleBoxTexture = null
 var filled_style: StyleBoxTexture = null

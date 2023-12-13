@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Item Slot Selected Backgorund.png-8ba49397c85d930a4ee4f4f1acc4bfc1.stex"
+path="res://.import/Item Slot Selected.png-a89914b0e5fbc0322812b17fa1af70ac.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI Player/Inventory/Item Slot Selected Backgorund.png"
-dest_files=[ "res://.import/Item Slot Selected Backgorund.png-8ba49397c85d930a4ee4f4f1acc4bfc1.stex" ]
+source_file="res://assets/UI Player/Inventory/Item Slot Selected.png"
+dest_files=[ "res://.import/Item Slot Selected.png-a89914b0e5fbc0322812b17fa1af70ac.stex" ]
 
 [params]
 

@@ -1343,7 +1343,7 @@ tile_data = PoolIntArray( -3407892, 55, 0, -3407890, 56, 0, -3407888, 54, 0, -34
 [node name="Arvores Roxas" type="YSort" parent="Ysort/Arvores"]
 
 [node name="1Arvore Roxa" type="Sprite" parent="Ysort/Arvores/Arvores Roxas"]
-position = Vector2( 388, 123 )
+position = Vector2( 388, 381 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 23, 16, 36, 48 )
@@ -1364,7 +1364,7 @@ __meta__ = {
 }
 
 [node name="2Arvore Roxa" type="Sprite" parent="Ysort/Arvores/Arvores Roxas"]
-position = Vector2( 389, 172 )
+position = Vector2( 389, 430 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 23, 80, 36, 48 )
@@ -5230,7 +5230,7 @@ __meta__ = {
 [node name="Arvores Laranja" type="YSort" parent="Ysort/Arvores"]
 
 [node name="1Arvore Laranja" type="Sprite" parent="Ysort/Arvores/Arvores Laranja"]
-position = Vector2( 424.798, 123.362 )
+position = Vector2( 424.798, 381.362 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 70, 16, 36, 48 )
@@ -5266,7 +5266,7 @@ rotation = 1.5708
 shape = SubResource( 13 )
 
 [node name="2Arvore Laranja" type="Sprite" parent="Ysort/Arvores/Arvores Laranja"]
-position = Vector2( 426, 173 )
+position = Vector2( 426, 431 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 70, 80, 36, 48 )
@@ -9612,7 +9612,7 @@ shape = SubResource( 13 )
 [node name="Arvores Vermelha" type="YSort" parent="Ysort/Arvores"]
 
 [node name="1Arvore Vermelha" type="Sprite" parent="Ysort/Arvores/Arvores Vermelha"]
-position = Vector2( 462, 122 )
+position = Vector2( 462, 380 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 118, 16, 36, 48 )
@@ -9633,7 +9633,7 @@ __meta__ = {
 }
 
 [node name="2Arvore Vermelha" type="Sprite" parent="Ysort/Arvores/Arvores Vermelha"]
-position = Vector2( 463, 173 )
+position = Vector2( 463, 431 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 118, 80, 36, 48 )
@@ -14089,7 +14089,7 @@ __meta__ = {
 [node name="Postes com Limo" type="YSort" parent="Ysort/Postes"]
 
 [node name="Poste Limo" type="Sprite" parent="Ysort/Postes/Postes com Limo"]
-position = Vector2( 555, 195 )
+position = Vector2( 555, 453 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 17, 16, 14, 48 )
@@ -14107,7 +14107,7 @@ __meta__ = {
 }
 
 [node name="Poste Limo Esq" type="Sprite" parent="Ysort/Postes/Postes com Limo"]
-position = Vector2( 573, 195 )
+position = Vector2( 573, 453 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 48, 16, 16, 48 )
@@ -14137,7 +14137,7 @@ position = Vector2( 2.95294, 18.9759 )
 shape = SubResource( 14 )
 
 [node name="Poste Limo Dir" type="Sprite" parent="Ysort/Postes/Postes com Limo"]
-position = Vector2( 594, 195 )
+position = Vector2( 594, 453 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 80, 16, 16, 48 )
@@ -14169,7 +14169,7 @@ shape = SubResource( 14 )
 [node name="Postes sem Limo" type="YSort" parent="Ysort/Postes"]
 
 [node name="Poste" type="Sprite" parent="Ysort/Postes/Postes sem Limo"]
-position = Vector2( 562, 133 )
+position = Vector2( 562, 391 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 17, 80, 14, 48 )
@@ -14187,7 +14187,7 @@ __meta__ = {
 }
 
 [node name="Poste Esq" type="Sprite" parent="Ysort/Postes/Postes sem Limo"]
-position = Vector2( 578, 133 )
+position = Vector2( 578, 391 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 48, 80, 16, 48 )
@@ -14205,7 +14205,7 @@ __meta__ = {
 }
 
 [node name="Poste Dir" type="Sprite" parent="Ysort/Postes/Postes sem Limo"]
-position = Vector2( 597, 133 )
+position = Vector2( 597, 391 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 80, 80, 16, 48 )
@@ -14309,13 +14309,13 @@ region_enabled = true
 region_rect = Rect2( 155, 16, 5, 22 )
 
 [node name="Cerca2" type="Sprite" parent="Ysort/Cercas"]
-position = Vector2( 712.746, 161.995 )
+position = Vector2( 712.746, 419.995 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 181, 81, 22, 20 )
 
 [node name="Cerca Vertical" type="Sprite" parent="Ysort/Cercas"]
-position = Vector2( 738.747, 164.831 )
+position = Vector2( 738.747, 422.831 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 191, 16, 5, 16 )
@@ -14369,7 +14369,7 @@ region_enabled = true
 region_rect = Rect2( 181, 81, 22, 20 )
 
 [node name="Cerca13" type="Sprite" parent="Ysort/Cercas"]
-position = Vector2( 656.849, 168.089 )
+position = Vector2( 656.849, 426.089 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 155, 16, 5, 22 )
@@ -14399,13 +14399,13 @@ region_enabled = true
 region_rect = Rect2( 128, 48, 32, 22 )
 
 [node name="Cerca com Pilar2" type="Sprite" parent="Ysort/Cercas"]
-position = Vector2( 685.746, 161.995 )
+position = Vector2( 685.746, 419.995 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 128, 48, 32, 22 )
 
 [node name="Colisão Cercas" type="KinematicBody2D" parent="Ysort/Cercas"]
-position = Vector2( 695.551, 166.855 )
+position = Vector2( 695.551, 424.855 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/Cercas/Colisão Cercas"]
 position = Vector2( 1.68176, 12.193 )
@@ -14589,6 +14589,7 @@ position = Vector2( 269, 125 )
 [node name="hotbar" parent="UserInterface" instance=ExtResource( 11 )]
 
 [node name="dia_e_noite" parent="." instance=ExtResource( 10 )]
+visible = false
 
 [node name="som_background" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
