@@ -1,0 +1,165 @@
+{
+	"events": [
+		{
+			"animation": "2-fade_in_up.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1708448484.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1708448484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Olá. Você me parece perdido"
+		},
+		{
+			"character": "character-1708448484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Precisa de ajuda?"
+		},
+		{
+			"animation": "back_in_down.gd",
+			"animation_length": 1.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1708450004.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1708450004.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "..."
+		},
+		{
+			"character": "character-1708448484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Que falta de educação a minha, devia ter me apresentado inicialmente...\nPrazer, sou a anfitriã da cidade. Minha função aqui é guiar os recém-chegados.\nE claro, zelar pelo bom funcionamento da cidade...\nPode me chamar de Dona.."
+		},
+		{
+			"animation": "2-fade_in_up.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1708450426.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1708450004.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "..."
+		},
+		{
+			"character": "character-1708448484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Você deve estar bem confuso no momento, permita-me explicar.\nInfelizmente...Você morreu.\nMas não fique triste, isso não é o fim!\nNa verdade é só o começo da sua nova e magnífica jornada..."
+		},
+		{
+			"character": "character-1708450426.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "? Cabeça de Abóbora fica mais confuso ainda."
+		},
+		{
+			"character": "character-1708448484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Calma, tud vai fazer sentido, eu prometo!\nQuando um ser vivo morre, sua alma se desprende do seu antigo corpo e passa a viajar pelo cosmo..\nAté que finalmente, ele chega ao seu devido mundo pós-morte. E assim como existem vários mundos para os vivos, também existem vários mundos para os mortos!"
+		},
+		{
+			"character": "character-1708450426.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Cabeça de Abóbora fica maravilhado. (*O*)"
+		},
+		{
+			"character": "character-1708448484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Bem legal, não é? E vai ficar ainda mais!\nA energia do cosmo é quem decide para qual mundo pós-morte cada alma vai. \nE a forma como vivemos e morremos influencia  muito na escolha.\nA lápide pela qual você chegou aqui gera seu novo corpo de acordo como veredito do cosmo.\nE nesta cidade, todas as mortes dos habitantes tem ligação com o Halloween.\nMas e você... Como posso te chamar?"
+		},
+		{
+			"character": "character-1708450426.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Cabeçã de Abóbora aponta para a cabeça.\nDona Morte da risadas."
+		},
+		{
+			"character": "character-1708448484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Prazer, Cabeça de Abóbora!"
+		},
+		{
+			"character": "character-1708450426.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Dona Morte entrega uma esfera para a cabeça de Abóbora."
+		},
+		{
+			"character": "character-1708448484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Pegue esta bola de cristal para que eu possa te orientar enquanto faço minhas outras tarefas."
+		},
+		{
+			"character": "character-1708450426.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Cabeça de Abóbora pega a esfera e a guarda."
+		},
+		{
+			"character": "character-1708448484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Boa sorte, novo habitante!\nSinta-se à vontade em Hallowtown, seu novo lar!"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1708448611.json",
+		"name": "timeline1"
+	}
+}

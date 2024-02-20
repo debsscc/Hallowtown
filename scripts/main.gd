@@ -53,4 +53,5 @@ func _on_Resume_pressed():
 
 
 func _on_Boto_dialogo_pressed():
-	pass # Replace with function body.
+		var dialogo_DonaMorte = Dialogic.start('timeline1')
+		add_child(dialogo_DonaMorte)

@@ -1,0 +1,21 @@
+{
+	"color": "#ffff0000",
+	"description": "",
+	"display_name": "Dona Morte",
+	"display_name_bool": true,
+	"id": "character-1708448484.json",
+	"mirror_portraits": false,
+	"name": "DonaMorte",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://assets/portraits/dona morte 64.png"
+		}
+	],
+	"scale": 70,
+	"theme": ""
+}

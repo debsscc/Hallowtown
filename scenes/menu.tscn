@@ -7,6 +7,8 @@
 [node name="Menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -1216.0
+margin_bottom = -656.0
 script = ExtResource( 3 )
 
 [node name="VideoPlayer" type="VideoPlayer" parent="."]

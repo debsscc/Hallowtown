@@ -1,0 +1,21 @@
+{
+	"color": "#ffe7cf09",
+	"description": "",
+	"display_name": "Cabeça de Abóbora",
+	"display_name_bool": true,
+	"id": "character-1708450004.json",
+	"mirror_portraits": false,
+	"name": "Abobora",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 100,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Characters/Pumpking boi/parado-sheet.png"
+		}
+	],
+	"scale": 100,
+	"theme": ""
+}
