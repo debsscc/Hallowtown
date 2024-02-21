@@ -280,6 +280,7 @@ dialogic_default_action={
 2d_physics/layer_2="npc"
 2d_physics/layer_3="objetos"
 2d_physics/layer_4="mapa"
+2d_physics/layer_5="farm items"
 
 [physics]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://assets/Map/Objetos/poste, cerca e cova.png" type="Texture" id=1]
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
@@ -8,9 +8,7 @@
 [ext_resource path="res://assets/Plants/abóbora3.png" type="Texture" id=6]
 [ext_resource path="res://assets/UI Player/PAUSE.png" type="Texture" id=7]
 [ext_resource path="res://scripts/userinterface.gd" type="Script" id=8]
-[ext_resource path="res://scenes/inventory.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/dia_e_noite.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/hotbar.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/Map/Tiny FOREST/tilemaps/autumn tilemap.png" type="Texture" id=12]
 [ext_resource path="res://assets/Plants/abóbora pn5.png" type="Texture" id=13]
 [ext_resource path="res://assets/Plants/abóbora2.png" type="Texture" id=14]
@@ -14502,10 +14500,11 @@ position = Vector2( 0, -643.383 )
 texture = ExtResource( 20 )
 
 [node name="Checkpoint" type="KinematicBody2D" parent="Ysort/Locais/Casa"]
-position = Vector2( -17, 63 )
+position = Vector2( 0, 6.383 )
+collision_layer = 4
+collision_mask = 27
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/Locais/Casa/Checkpoint"]
-position = Vector2( 17, -57 )
 shape = SubResource( 11 )
 
 [node name="Cova" type="Sprite" parent="Ysort/Locais"]
@@ -14515,6 +14514,8 @@ region_enabled = true
 region_rect = Rect2( 110, 69, 19, 59 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="Ysort/Locais/Cova"]
+collision_layer = 4
+collision_mask = 27
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/Locais/Cova/KinematicBody2D"]
 position = Vector2( 0, 9 )
@@ -14581,12 +14582,6 @@ margin_top = -1.0
 margin_right = 287.0
 margin_bottom = 107.0
 mouse_default_cursor_shape = 2
-
-[node name="inventory" parent="UserInterface" instance=ExtResource( 9 )]
-visible = false
-position = Vector2( 269, 125 )
-
-[node name="hotbar" parent="UserInterface" instance=ExtResource( 11 )]
 
 [node name="dia_e_noite" parent="." instance=ExtResource( 10 )]
 visible = false

@@ -120,4 +120,8 @@ func _on_Area2D_body_entered(body):
 	if body == $Player:
 		position -= collision.normal * collision.travel
 
+func player_sell_method():
+	pass
 
+func player_buy_method():
+	pass
