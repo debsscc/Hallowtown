@@ -18,7 +18,7 @@ func _physics_process(delta):
 	if self.visible == true:
 		if item == 1:
 			$itemicon.play("aboboraseed")
-			$price.text = "100"
+			$price.text = "x100"
 			if Global.coins >= item1price:
 				if item1owned == false:
 					$buyicon.play("canbuy")
@@ -28,7 +28,7 @@ func _physics_process(delta):
 				$buyicon.play("cannotbuy")
 		if item == 2:
 			$itemicon.play("coracaoseed")
-			$price.text = "150"
+			$price.text = "x150"
 			if Global.coins >= item2price:
 				if item2owned == false:
 					$buyicon.play("canbuy")

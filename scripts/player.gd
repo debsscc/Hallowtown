@@ -125,3 +125,9 @@ func player_sell_method():
 
 func player_buy_method():
 	pass
+
+func player_enter_method():
+	pass
+
+func player_exit_method():
+	pass

@@ -4,12 +4,10 @@ var plant = Global.plantselected
 var plantgrowing = false
 var plant_grown = false
 
-# warning-ignore:unused_argument
 func _physics_process(delta):
 	if plantgrowing == false:
 		plant = Global.plantselected
 
-# warning-ignore:unused_argument
 func _on_Area2D_area_entered(area):
 	if not plantgrowing:
 		if plant == 1:
@@ -49,10 +47,6 @@ func _on_guaranatimer_timeout():
 		guarana_plant.frame = 4
 		plant_grown = true
 
-
-# warning-ignore:unused_argument
-# warning-ignore:unused_argument
-# warning-ignore:unused_argument
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("left_click"):
 		if plant_grown:

@@ -29,7 +29,6 @@ func _on_Resume_pressed():
 	backgroundSound.play()
 	isPaused = false  # Define a variável para false quando o jogo é retomado
 
-func _physics_process(delta):
-	$UserInterface/estatisticas/guaranatext.text = ("= " + str(Global.numofguaranas))
-	$UserInterface/estatisticas/aboboratext.text = ("= " + str(Global.numofaboboras))
-	$UserInterface/estatisticas/moedastext.text = ("= " + str(Global.coins))
+func _on_exit_farm_body_entered(body):
+	if body.has_method("player_exit_method"):
+		get_tree().change_scene("res://scenes/main.tscn")

@@ -1,22 +1,21 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://assets/Map/Tiny FOREST/tilemaps/autumn tilemap.png" type="Texture" id=1]
 [ext_resource path="res://assets/Map/Objetos/poste, cerca e cova.png" type="Texture" id=2]
 [ext_resource path="res://assets/Item/casa hallowtown png.png" type="Texture" id=3]
-[ext_resource path="res://assets/Plants/guaraná png5.png" type="Texture" id=4]
 [ext_resource path="res://scripts/userinterface.gd" type="Script" id=5]
 [ext_resource path="res://assets/UI Player/PAUSE.png" type="Texture" id=6]
 [ext_resource path="res://assets/Map/Objetos/arvores.png" type="Texture" id=7]
 [ext_resource path="res://Audio/forest.mp3" type="AudioStream" id=8]
 [ext_resource path="res://scenes/sellzone.tscn" type="PackedScene" id=9]
-[ext_resource path="res://assets/Plants/abóbora pn5.png" type="Texture" id=11]
+[ext_resource path="res://Characters/Frank/sprite frank frente.png" type="Texture" id=10]
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/semente_de_guarana.tscn" type="PackedScene" id=13]
-[ext_resource path="res://assets/Item/MOEDA.png" type="Texture" id=14]
 [ext_resource path="res://assets/Map/Tileset/crop plantação.png" type="Texture" id=15]
 [ext_resource path="res://scenes/area da plantação.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scripts/farm.gd" type="Script" id=17]
 [ext_resource path="res://scenes/buyzone.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/player_ui.tscn" type="PackedScene" id=20]
 
 [sub_resource type="ConvexPolygonShape2D" id=9]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -1303,6 +1302,13 @@ extents = Vector2( 176, 1.5 )
 [sub_resource type="RectangleShape2D" id=15]
 extents = Vector2( 42, 36 )
 
+[sub_resource type="CircleShape2D" id=20]
+radius = 200.0
+
+[sub_resource type="CapsuleShape2D" id=19]
+radius = 20.0
+height = 0.01
+
 [node name="farm" type="Node2D"]
 script = ExtResource( 17 )
 
@@ -1321,16 +1327,10 @@ cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 collision_layer = 8
 collision_mask = 7
 format = 1
-tile_data = PoolIntArray( 65535, 27, 0, 0, 23, 0, 131071, 27, 0, 65536, 23, 0, 196607, 27, 0, 131072, 23, 0, 262143, 27, 0, 196608, 23, 0, 327679, 27, 0, 262144, 23, 0, 393215, 27, 0, 327680, 23, 0, 458751, 27, 0, 393216, 23, 0, 524287, 27, 0, 458752, 23, 0, 589823, 27, 0, 524288, 23, 0, 655359, 27, 0, 589824, 23, 0, 720895, 27, 0, 655360, 23, 0, 786431, 27, 0, 720896, 23, 0, 851967, 27, 0, 786432, 23, 0, 917503, 27, 0, 851968, 23, 0, 983039, 27, 0, 917504, 23, 0, 1048575, 27, 0, 983040, 23, 0, 1114111, 26, 0, 1048576, 24, 0 )
-
-[node name="buyzone" parent="." instance=ExtResource( 18 )]
-position = Vector2( 111, -46 )
+tile_data = PoolIntArray( -1114129, 43, 0, -1114128, 44, 0, -1114127, 44, 0, -1114126, 45, 0, -1114123, 43, 0, -1114122, 44, 0, -1114121, 44, 0, -1114120, 45, 0, -1048593, 46, 0, -1048592, 47, 0, -1048591, 47, 0, -1048590, 48, 0, -1048587, 46, 0, -1048586, 47, 0, -1048585, 47, 0, -1048584, 48, 0, -983057, 46, 0, -983056, 47, 0, -983055, 47, 0, -983054, 48, 0, -983051, 46, 0, -983050, 47, 0, -983049, 47, 0, -983048, 48, 0, -917521, 49, 0, -917520, 50, 0, -917519, 50, 0, -917518, 51, 0, -917515, 49, 0, -917514, 50, 0, -917513, 50, 0, -917512, 51, 0, -720913, 43, 0, -720912, 44, 0, -720911, 44, 0, -720910, 45, 0, -720907, 43, 0, -720906, 44, 0, -720905, 44, 0, -720904, 45, 0, -655377, 46, 0, -655376, 47, 0, -655375, 47, 0, -655374, 48, 0, -655371, 46, 0, -655370, 47, 0, -655369, 47, 0, -655368, 48, 0, -655361, 27, 0, -720896, 23, 0, -589841, 46, 0, -589840, 47, 0, -589839, 47, 0, -589838, 48, 0, -589835, 46, 0, -589834, 47, 0, -589833, 47, 0, -589832, 48, 0, -589825, 27, 0, -655360, 23, 0, -524305, 49, 0, -524304, 50, 0, -524303, 50, 0, -524302, 51, 0, -524299, 49, 0, -524298, 50, 0, -524297, 50, 0, -524296, 51, 0, -524290, 20, 0, -524289, 32, 0, -589824, 31, 0, -589823, 22, 0, -458756, 20, 0, -458755, 21, 0, -458754, 32, 0, -458753, 28, 0, -524288, 28, 0, -524287, 31, 0, -524286, 21, 0, -524285, 22, 0, -393220, 27, 0, -393219, 28, 0, -393218, 28, 0, -393217, 28, 0, -458752, 28, 0, -458751, 28, 0, -458750, 28, 0, -458749, 23, 0, -327697, 43, 0, -327696, 44, 0, -327695, 44, 0, -327694, 45, 0, -327691, 43, 0, -327690, 44, 0, -327689, 44, 0, -327688, 45, 0, -327684, 27, 0, -327683, 28, 0, -327682, 28, 0, -327681, 28, 0, -393216, 28, 0, -393215, 28, 0, -393214, 28, 0, -393213, 23, 0, -262161, 46, 0, -262160, 47, 0, -262159, 47, 0, -262158, 48, 0, -262155, 46, 0, -262154, 47, 0, -262153, 47, 0, -262152, 48, 0, -262148, 27, 0, -262147, 28, 0, -262146, 28, 0, -262145, 28, 0, -327680, 28, 0, -327679, 28, 0, -327678, 28, 0, -327677, 23, 0, -196625, 46, 0, -196624, 47, 0, -196623, 47, 0, -196622, 48, 0, -196619, 46, 0, -196618, 47, 0, -196617, 47, 0, -196616, 48, 0, -196612, 27, 0, -196611, 28, 0, -196610, 28, 0, -196609, 28, 0, -262144, 28, 0, -262143, 28, 0, -262142, 28, 0, -262141, 23, 0, -131089, 49, 0, -131088, 50, 0, -131087, 50, 0, -131086, 51, 0, -131083, 49, 0, -131082, 50, 0, -131081, 50, 0, -131080, 51, 0, -131076, 27, 0, -131075, 28, 0, -131074, 28, 0, -131073, 28, 0, -196608, 28, 0, -196607, 28, 0, -196606, 28, 0, -196605, 23, 0, -65540, 26, 0, -65539, 25, 0, -65538, 30, 0, -65537, 28, 0, -131072, 28, 0, -131071, 29, 0, -131070, 25, 0, -131069, 24, 0, -2, 26, 0, -1, 30, 0, -65536, 29, 0, -65535, 24, 0, 65535, 27, 0, 0, 23, 0, 131071, 27, 0, 65536, 23, 0, 196607, 27, 0, 131072, 23, 0, 262143, 27, 0, 196608, 23, 0, 327679, 27, 0, 262144, 23, 0, 393215, 27, 0, 327680, 23, 0, 458751, 27, 0, 393216, 23, 0, 524287, 27, 0, 458752, 23, 0, 589823, 27, 0, 524288, 23, 0, 655359, 27, 0, 589824, 23, 0, 720895, 27, 0, 655360, 23, 0, 786431, 27, 0, 720896, 23, 0, 851967, 27, 0, 786432, 23, 0, 917503, 27, 0, 851968, 23, 0, 983039, 27, 0, 917504, 23, 0, 1048575, 27, 0, 983040, 23, 0, 1114111, 26, 0, 1048576, 24, 0 )
 
 [node name="sellzone" parent="." instance=ExtResource( 9 )]
-position = Vector2( 109, -137 )
-
-[node name="area da plantação" parent="." instance=ExtResource( 16 )]
-position = Vector2( -114, -151 )
+position = Vector2( 113, -53 )
 
 [node name="Ysort" type="YSort" parent="."]
 
@@ -5405,7 +5405,295 @@ position = Vector2( 316.5, -160 )
 rotation = 1.5708
 shape = SubResource( 18 )
 
-[node name="Plantas" type="YSort" parent="Ysort"]
+[node name="Plantacao" type="YSort" parent="Ysort"]
+
+[node name="area da plantação" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -272, -288 )
+
+[node name="area da plantação2" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -256, -288 )
+
+[node name="area da plantação3" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -240, -288 )
+
+[node name="area da plantação4" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -224, -288 )
+
+[node name="area da plantação5" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -272, -272 )
+
+[node name="area da plantação6" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -256, -272 )
+
+[node name="area da plantação7" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -240, -272 )
+
+[node name="area da plantação8" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -224, -272 )
+
+[node name="area da plantação9" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -272, -256 )
+
+[node name="area da plantação10" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -256, -256 )
+
+[node name="area da plantação11" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -240, -256 )
+
+[node name="area da plantação12" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -224, -256 )
+
+[node name="area da plantação13" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -272, -240 )
+
+[node name="area da plantação14" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -256, -240 )
+
+[node name="area da plantação15" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -240, -240 )
+
+[node name="area da plantação16" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -224, -240 )
+
+[node name="area da plantação17" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -176, -288 )
+
+[node name="area da plantação18" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -160, -288 )
+
+[node name="area da plantação19" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -144, -288 )
+
+[node name="area da plantação20" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -128, -288 )
+
+[node name="area da plantação21" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -176, -272 )
+
+[node name="area da plantação22" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -160, -272 )
+
+[node name="area da plantação23" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -144, -272 )
+
+[node name="area da plantação24" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -128, -272 )
+
+[node name="area da plantação25" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -176, -256 )
+
+[node name="area da plantação26" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -160, -256 )
+
+[node name="area da plantação27" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -144, -256 )
+
+[node name="area da plantação28" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -128, -256 )
+
+[node name="area da plantação29" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -176, -240 )
+
+[node name="area da plantação30" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -160, -240 )
+
+[node name="area da plantação31" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -144, -240 )
+
+[node name="area da plantação32" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -128, -240 )
+
+[node name="area da plantação33" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -272, -192 )
+
+[node name="area da plantação34" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -256, -192 )
+
+[node name="area da plantação35" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -240, -192 )
+
+[node name="area da plantação36" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -224, -192 )
+
+[node name="area da plantação37" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -272, -176 )
+
+[node name="area da plantação38" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -256, -176 )
+
+[node name="area da plantação39" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -240, -176 )
+
+[node name="area da plantação40" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -224, -176 )
+
+[node name="area da plantação41" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -272, -160 )
+
+[node name="area da plantação42" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -256, -160 )
+
+[node name="area da plantação43" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -240, -160 )
+
+[node name="area da plantação44" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -224, -160 )
+
+[node name="area da plantação45" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -272, -144 )
+
+[node name="area da plantação46" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -256, -144 )
+
+[node name="area da plantação47" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -240, -144 )
+
+[node name="area da plantação48" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -224, -144 )
+
+[node name="area da plantação49" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -176, -192 )
+
+[node name="area da plantação50" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -160, -192 )
+
+[node name="area da plantação51" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -144, -192 )
+
+[node name="area da plantação52" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -128, -192 )
+
+[node name="area da plantação53" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -176, -176 )
+
+[node name="area da plantação54" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -160, -176 )
+
+[node name="area da plantação55" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -144, -176 )
+
+[node name="area da plantação56" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -128, -176 )
+
+[node name="area da plantação57" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -176, -160 )
+
+[node name="area da plantação58" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -160, -160 )
+
+[node name="area da plantação59" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -144, -160 )
+
+[node name="area da plantação60" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -128, -160 )
+
+[node name="area da plantação61" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -176, -144 )
+
+[node name="area da plantação62" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -160, -144 )
+
+[node name="area da plantação63" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -144, -144 )
+
+[node name="area da plantação64" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -128, -144 )
+
+[node name="area da plantação65" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -272, -96 )
+
+[node name="area da plantação66" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -256, -96 )
+
+[node name="area da plantação67" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -240, -96 )
+
+[node name="area da plantação68" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -224, -96 )
+
+[node name="area da plantação69" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -272, -80 )
+
+[node name="area da plantação70" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -256, -80 )
+
+[node name="area da plantação71" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -240, -80 )
+
+[node name="area da plantação72" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -224, -80 )
+
+[node name="area da plantação73" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -272, -64 )
+
+[node name="area da plantação74" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -256, -64 )
+
+[node name="area da plantação75" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -240, -64 )
+
+[node name="area da plantação76" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -224, -64 )
+
+[node name="area da plantação77" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -272, -48 )
+
+[node name="area da plantação78" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -256, -48 )
+
+[node name="area da plantação79" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -240, -48 )
+
+[node name="area da plantação80" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -224, -48 )
+
+[node name="area da plantação81" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -176, -96 )
+
+[node name="area da plantação82" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -160, -96 )
+
+[node name="area da plantação83" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -144, -96 )
+
+[node name="area da plantação84" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -128, -96 )
+
+[node name="area da plantação85" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -176, -80 )
+
+[node name="area da plantação86" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -160, -80 )
+
+[node name="area da plantação87" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -144, -80 )
+
+[node name="area da plantação88" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -128, -80 )
+
+[node name="area da plantação89" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -176, -64 )
+
+[node name="area da plantação90" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -160, -64 )
+
+[node name="area da plantação91" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -144, -64 )
+
+[node name="area da plantação92" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -128, -64 )
+
+[node name="area da plantação93" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -176, -48 )
+
+[node name="area da plantação94" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -160, -48 )
+
+[node name="area da plantação95" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -144, -48 )
+
+[node name="area da plantação96" parent="Ysort/Plantacao" instance=ExtResource( 16 )]
+position = Vector2( -128, -48 )
 
 [node name="Locais" type="YSort" parent="Ysort"]
 
@@ -5424,6 +5712,21 @@ shape = SubResource( 15 )
 [node name="Entidades" type="YSort" parent="Ysort"]
 
 [node name="NPC" type="YSort" parent="Ysort/Entidades"]
+
+[node name="Frank" type="Sprite" parent="Ysort/Entidades/NPC"]
+position = Vector2( 120, -165 )
+scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 10 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Ysort/Entidades/NPC/Frank"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/Entidades/NPC/Frank/KinematicBody2D"]
+position = Vector2( 100, 112.5 )
+shape = SubResource( 20 )
+
+[node name="buyzone" parent="Ysort/Entidades/NPC/Frank" instance=ExtResource( 18 )]
+position = Vector2( 100, 137.5 )
+scale = Vector2( 12.5, 12.5 )
 
 [node name="Player" parent="Ysort/Entidades" instance=ExtResource( 12 )]
 position = Vector2( 0, -46 )
@@ -5455,53 +5758,7 @@ margin_right = 287.0
 margin_bottom = 107.0
 mouse_default_cursor_shape = 2
 
-[node name="estatisticas" type="Node2D" parent="UserInterface"]
-
-[node name="moedastext" type="RichTextLabel" parent="UserInterface/estatisticas"]
-margin_left = 1245.0
-margin_top = 10.0
-margin_right = 1280.0
-margin_bottom = 25.0
-meta_underlined = false
-tab_size = 1
-text = "= 0"
-scroll_active = false
-deselect_on_focus_loss_enabled = false
-
-[node name="guaranatext" type="RichTextLabel" parent="UserInterface/estatisticas"]
-margin_left = 1245.0
-margin_top = 30.0
-margin_right = 1280.0
-margin_bottom = 45.0
-meta_underlined = false
-tab_size = 1
-text = "= 0"
-scroll_active = false
-deselect_on_focus_loss_enabled = false
-
-[node name="aboboratext" type="RichTextLabel" parent="UserInterface/estatisticas"]
-margin_left = 1245.0
-margin_top = 50.0
-margin_right = 1280.0
-margin_bottom = 65.0
-meta_underlined = false
-tab_size = 1
-text = "= 0"
-scroll_active = false
-deselect_on_focus_loss_enabled = false
-
-[node name="moedasicon" type="Sprite" parent="UserInterface/estatisticas"]
-position = Vector2( 1233, 16 )
-scale = Vector2( 0.08, 0.08 )
-texture = ExtResource( 14 )
-
-[node name="guaranaicon" type="Sprite" parent="UserInterface/estatisticas"]
-position = Vector2( 1233, 37 )
-texture = ExtResource( 4 )
-
-[node name="aboboraicon" type="Sprite" parent="UserInterface/estatisticas"]
-position = Vector2( 1234, 56 )
-texture = ExtResource( 11 )
+[node name="player_ui" parent="UserInterface" instance=ExtResource( 20 )]
 
 [node name="som_background" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 8 )
@@ -5509,7 +5766,14 @@ volume_db = 11.361
 autoplay = true
 
 [node name="semente_de_guarana" parent="." instance=ExtResource( 13 )]
-position = Vector2( -61, -134 )
+position = Vector2( -96, -184 )
+
+[node name="exit_farm" type="Area2D" parent="."]
+position = Vector2( 0, 74 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exit_farm"]
+shape = SubResource( 19 )
 
 [connection signal="pressed" from="UserInterface/pause/Exit Game" to="." method="_on_Exit_Game_pressed"]
 [connection signal="pressed" from="UserInterface/pause/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="body_entered" from="exit_farm" to="." method="_on_exit_farm_body_entered"]

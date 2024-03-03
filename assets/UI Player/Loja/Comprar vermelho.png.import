@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/morte.png-dc8f1e8239aae5aa804322832ea3e18a.stex"
+path="res://.import/Comprar vermelho.png-5bb6fe34e6d1edd1646852d0b78c9339.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/testes/morte.png"
-dest_files=[ "res://.import/morte.png-dc8f1e8239aae5aa804322832ea3e18a.stex" ]
+source_file="res://assets/UI Player/Loja/Comprar vermelho.png"
+dest_files=[ "res://.import/Comprar vermelho.png-5bb6fe34e6d1edd1646852d0b78c9339.stex" ]
 
 [params]
 
