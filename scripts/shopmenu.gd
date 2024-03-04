@@ -4,9 +4,11 @@ extends StaticBody2D
 var item = 1
 var price 
 
+#preços dos itens
 var item1price = 100
 var item2price = 150
 
+#guarda se possui ou nao o item
 var item1owned = false
 var item2owned = false
 

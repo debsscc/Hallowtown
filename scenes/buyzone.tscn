@@ -25,7 +25,7 @@ position = Vector2( -37, -81 )
 
 [node name="semente_de_abobora" parent="." instance=ExtResource( 4 )]
 visible = false
-position = Vector2( 36, 0 )
+position = Vector2( 53, -13 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

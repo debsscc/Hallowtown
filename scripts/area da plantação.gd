@@ -25,7 +25,6 @@ func _on_aboboratimer_timeout():
 		abobora_plant.frame = 1
 		$aboboratimer.start()
 	elif abobora_plant.frame == 1:
-# warning-ignore:standalone_expression
 		abobora_plant.frame ==2
 	elif abobora_plant.frame == 2:
 		abobora_plant.frame = 3

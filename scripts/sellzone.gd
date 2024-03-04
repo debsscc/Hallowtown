@@ -16,7 +16,7 @@ func _on_Area2D_body_entered(body):
 		abobora = 0
 		guarana = 0
 		
-		#atualição da quantidade de itens
+		#atualiza a quantidade de itens
 		Global.coins = coins
 		Global.numofaboboras = abobora
 		Global.numofguaranas = guarana

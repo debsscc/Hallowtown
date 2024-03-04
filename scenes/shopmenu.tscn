@@ -118,7 +118,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="price2" type="Label" parent="buyicon"]
+[node name="comprar" type="Label" parent="buyicon"]
 margin_left = -10.0
 margin_top = -2.0
 margin_right = 55.0
