@@ -14528,36 +14528,7 @@ shape = SubResource( 15 )
 
 [node name="NPC" type="YSort" parent="Ysort/Entidades"]
 
-[node name="Dona Morte" type="Sprite" parent="Ysort/Entidades/NPC"]
-position = Vector2( 64, -65 )
-scale = Vector2( 0.1125, 0.1125 )
-texture = ExtResource( 5 )
-
-[node name="Dona_Morte" type="KinematicBody2D" parent="Ysort/Entidades/NPC/Dona Morte"]
-position = Vector2( -586.667, 577.778 )
-scale = Vector2( 8.88889, 8.88889 )
-collision_layer = 2
-collision_mask = 13
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/Entidades/NPC/Dona Morte/Dona_Morte"]
-position = Vector2( 65, -67 )
-shape = SubResource( 12 )
-
-[node name="Botão_dialogo" type="Button" parent="Ysort/Entidades/NPC/Dona Morte/Dona_Morte"]
-modulate = Color( 0, 0, 0, 0 )
-self_modulate = Color( 1, 1, 1, 0 )
-margin_left = 53.0
-margin_top = -91.0
-margin_right = 75.0
-margin_bottom = -41.0
-mouse_default_cursor_shape = 2
-
-[node name="Dona_MorteSFX" type="AudioStreamPlayer2D" parent="Ysort/Entidades/NPC/Dona Morte/Dona_Morte"]
-position = Vector2( 64, -80 )
-scale = Vector2( 1, 1 )
-stream = ExtResource( 28 )
-
-[node name="Player" parent="Ysort/Entidades" instance=ExtResource( 2 )]
+[node name="Player" parent="Ysort/Entidades/NPC" instance=ExtResource( 2 )]
 position = Vector2( 0, -55 )
 
 [node name="UserInterface" type="CanvasLayer" parent="."]
@@ -14589,6 +14560,34 @@ mouse_default_cursor_shape = 2
 
 [node name="dia_e_noite" parent="." instance=ExtResource( 10 )]
 
+[node name="Dona Morte" type="Sprite" parent="."]
+position = Vector2( 64, -65 )
+scale = Vector2( 0.1125, 0.1125 )
+texture = ExtResource( 5 )
+
+[node name="Dona_Morte" type="KinematicBody2D" parent="Dona Morte"]
+position = Vector2( -586.667, 577.778 )
+scale = Vector2( 8.88889, 8.88889 )
+collision_layer = 2
+collision_mask = 13
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dona Morte/Dona_Morte"]
+position = Vector2( 65, -67 )
+shape = SubResource( 12 )
+
+[node name="Botão_dialogo" type="Button" parent="Dona Morte/Dona_Morte"]
+modulate = Color( 0, 0, 0, 0 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 49.0
+margin_top = -95.0
+margin_right = 83.0
+margin_bottom = -39.0
+mouse_default_cursor_shape = 2
+
+[node name="Dona_MorteSFX" type="AudioStreamPlayer2D" parent="Dona Morte/Dona_Morte"]
+position = Vector2( 64, -80 )
+stream = ExtResource( 28 )
+
 [node name="som_background" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
 volume_db = 11.361
@@ -14600,8 +14599,8 @@ position = Vector2( 0, -498 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enter_farm"]
 shape = SubResource( 19 )
 
-[connection signal="pressed" from="Ysort/Entidades/NPC/Dona Morte/Dona_Morte/Botão_dialogo" to="." method="_on_Boto_dialogo_pressed"]
-[connection signal="finished" from="Ysort/Entidades/NPC/Dona Morte/Dona_Morte/Dona_MorteSFX" to="." method="_on_Dona_MorteSFX_finished"]
 [connection signal="pressed" from="UserInterface/pause/Exit Game" to="." method="_on_Exit_Game_pressed"]
 [connection signal="pressed" from="UserInterface/pause/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="pressed" from="Dona Morte/Dona_Morte/Botão_dialogo" to="." method="_on_Boto_dialogo_pressed"]
+[connection signal="finished" from="Dona Morte/Dona_Morte/Dona_MorteSFX" to="." method="_on_Dona_MorteSFX_finished"]
 [connection signal="body_entered" from="enter_farm" to="." method="_on_enter_farm_body_entered"]

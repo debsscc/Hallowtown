@@ -53,8 +53,8 @@ func _on_Resume_pressed():
 
 
 func _on_Boto_dialogo_pressed():
-		var dialogo_DonaMorte = Dialogic.start('timeline1')
-		add_child(dialogo_DonaMorte)
+		var dialogo_DonaMortee = Dialogic.start('timeline1')
+		add_child(dialogo_DonaMortee)
 
 
 func _on_enter_farm_body_entered(body):

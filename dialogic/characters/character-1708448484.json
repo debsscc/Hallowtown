@@ -8,14 +8,14 @@
 	"name": "DonaMorte",
 	"nickname": "",
 	"nickname_bool": false,
-	"offset_x": 0,
-	"offset_y": 0,
+	"offset_x": -20,
+	"offset_y": 10,
 	"portraits": [
 		{
 			"name": "Default",
 			"path": "res://assets/portraits/dona morte 64.png"
 		}
 	],
-	"scale": 70,
+	"scale": 50,
 	"theme": ""
 }
