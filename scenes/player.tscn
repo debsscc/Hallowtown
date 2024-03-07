@@ -1,4 +1,4 @@
-[gd_scene load_steps=158 format=2]
+[gd_scene load_steps=167 format=2]
 
 [ext_resource path="res://Characters/Pumpking boi/iddlefrente-Sheet.png" type="Texture" id=1]
 [ext_resource path="res://scripts/player.gd" type="Script" id=2]
@@ -16,6 +16,10 @@
 [ext_resource path="res://Characters/Pumpking boi/iddledir-Sheet.png" type="Texture" id=14]
 [ext_resource path="res://Characters/Pumpking boi/idlecostas-Sheet.png" type="Texture" id=15]
 [ext_resource path="res://Characters/Pumpking boi/iddleesq-Sheet.png" type="Texture" id=16]
+[ext_resource path="res://Characters/Pumpking boi/Walk and Run/correndo e andando para direita-Sheet.png" type="Texture" id=17]
+[ext_resource path="res://Characters/Pumpking boi/Walk and Run/correndo e andando para cima-Sheet.png" type="Texture" id=18]
+[ext_resource path="res://Characters/Pumpking boi/Walk and Run/correndo e andando pra baixo-Sheet.png" type="Texture" id=19]
+[ext_resource path="res://Characters/Pumpking boi/Walk and Run/correndo e andando pra esquerda-Sheet.png" type="Texture" id=20]
 
 [sub_resource type="AtlasTexture" id=181]
 atlas = ExtResource( 14 )
@@ -650,6 +654,125 @@ animations = [ {
 radius = 6.0
 height = 4.0
 
+[sub_resource type="Animation" id=219]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=220]
+resource_name = "Walk_Run_DOWN"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 19 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+
+[sub_resource type="Animation" id=221]
+resource_name = "Walk_Run_LEFT"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 20 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+
+[sub_resource type="Animation" id=222]
+resource_name = "Walk_Run_RIGHT"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+
+[sub_resource type="Animation" id=223]
+resource_name = "Walk_Run_UP"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 18 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 14
 script = ExtResource( 2 )
@@ -658,7 +781,7 @@ script = ExtResource( 2 )
 position = Vector2( 8, -3.57628e-07 )
 frames = SubResource( 56 )
 animation = "dir"
-frame = 6
+frame = 8
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -678,3 +801,17 @@ editor_draw_limits = true
 visible = false
 stream = ExtResource( 7 )
 volume_db = -15.731
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 17 )
+hframes = 8
+vframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 219 )
+anims/Walk_Run_DOWN = SubResource( 220 )
+anims/Walk_Run_LEFT = SubResource( 221 )
+anims/Walk_Run_RIGHT = SubResource( 222 )
+anims/Walk_Run_UP = SubResource( 223 )

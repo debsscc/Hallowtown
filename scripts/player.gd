@@ -7,12 +7,6 @@ var running = 1
 onready var lastDirection: Vector2 = Vector2.ZERO #Variavel para verificar a ultima direção de seta feito pelo jogador
 #var isWatering = false  # Variável para rastrear se o jogador está regando
 
-
-onready var Game = get_node("/root/main")
-onready var Inventory = get_node("UI/Inventory") 
-onready var EnergyBar = get_node("UI/Energy Bar")
-onready var ShopMenu = get_node("/root/main/Loja/Shop Menu")
-
 onready var movementSound = $Som_caminhada
 
 func get_animation_from_direction(direction: Vector2) -> String:
