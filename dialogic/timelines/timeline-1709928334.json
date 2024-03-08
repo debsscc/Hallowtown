@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "character-1708450426.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ops! Parece que Cabeça de Abóbora ainda não pode subir para o andar de cima..."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1709928334.json",
+		"name": "escadas"
+	}
+}

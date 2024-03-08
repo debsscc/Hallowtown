@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "character-1708450426.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Um liquido preto sai da torneira da pia, Cabeça de Abóbora se pergunta o que é."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1709927402.json",
+		"name": "torneira"
+	}
+}
