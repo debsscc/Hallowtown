@@ -11,7 +11,6 @@ var isPaused = false #Variavel que rastreia se o jogo ta pausado
 
 
 func _ready():
-	introducao_video.play()
 	pause = $UserInterface/pause
 	pause.hide()
 	ui.hide()

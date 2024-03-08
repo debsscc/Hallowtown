@@ -3,6 +3,7 @@ extends StaticBody2D
 var plant = Global.plantselected
 var plantgrowing = false
 var plant_grown = false
+var item_name
 
 func _physics_process(delta):
 	if plantgrowing == false:

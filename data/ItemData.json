@@ -1,0 +1,17 @@
+{
+	"Regador": {
+		"ItemCategory": "Ferramenta",
+		"StackSize": 1,
+		"Description": "Ferramenta utilizada para regar as plantacoes",
+	},
+	"Guarana": {
+		"ItemCategory": "Coletavel",
+		"StackSize": 99,
+		"Description": "Fruto das sementes de guarana",
+	},
+	"Abobora": {
+		"ItemCategory": "Coletavel",
+		"StackSize": 99,
+		"Description": "Fruto das sementes de abobora",
+	},
+}

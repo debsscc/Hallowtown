@@ -8,16 +8,11 @@ const NUM_INVENTORY_SLOTS = 20
 const NUM_HOTBAR_SLOTS = 10
 
 var inventory = {
-	0: ["Watering Can", 1], #[item_name, quantity_item]
-	1: ["Guarana Seed", 90],
-	2: ["Guarana Seed", 12],
-	3: ["Guarana Seed", 28],
-	4: ["Guarana Seed", 1],
+	0: ["Regador", 1], #[item_name, quantity_item]
 }
 
 var hotbar = {
-	0: ["Watering Can", 1], #[item_name, quantity_item]
-	1: ["Guarana Seed", 20],
+	0: ["Regador", 1], #[item_name, quantity_item]
 }
 
 var active_item_slot = 0

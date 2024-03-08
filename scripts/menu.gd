@@ -15,6 +15,7 @@ func _on_Button_pressed():
 	$AudioStreamPlayer.stop()
 	video_introducao.show()
 	video_introducao.play()
+	$Button.hide()
 	
 
 func _on_IntroducaoAbobora_finished():

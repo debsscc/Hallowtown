@@ -81,14 +81,26 @@ func _physics_process(delta):
 
 	if moveVector.x == 0:
 		if moveVector.y < 0:
-			$AnimatedSprite.play("up_walk")
+			if running == 1:
+				$AnimatedSprite.play("up_walk")
+			elif running == 2:
+				$AnimatedSprite.play("up_run")
 		elif moveVector.y > 0:
-			$AnimatedSprite.play("down_walk")
+			if running == 1:
+				$AnimatedSprite.play("down_walk")
+			elif running == 2:
+				$AnimatedSprite.play("down_run")
 	else:
 		if moveVector.x > 0:
-			$AnimatedSprite.play("sidewalk-dir")
+			if running == 1:
+				$AnimatedSprite.play("dir_walk")
+			elif running == 2:
+				$AnimatedSprite.play("dir_run")
 		elif moveVector.x < 0:
-			$AnimatedSprite.play("sidewalk-esq")
+			if running == 1:
+				$AnimatedSprite.play("esq_walk")
+			elif running == 2:
+				$AnimatedSprite.play("esq_run")
 
 
 	if Input.is_action_pressed("run"):

@@ -7,7 +7,7 @@ var numofguaranas = 0
 var numofaboboras = 0
 
 #moedas do jogador
-var coins = 200
+var coins = 0
 
 func _ready():
 	pass

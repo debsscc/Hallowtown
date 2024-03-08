@@ -6,7 +6,7 @@ var item_quantity
 func _ready():
 	var rand_val = randi() % 1
 	if rand_val == 0:
-		item_name = "Watering Can"
+		item_name = "Regador"
 	
 	$TextureRect.texture = load("res://assets/Item/" + item_name + ".png")
 	var stack_size = int(JSONdata.item_data[item_name]["StackSize"])

@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/Item/Guarana Seed.png" type="Texture" id=3]
 [ext_resource path="res://assets/Item/MOEDA.png" type="Texture" id=4]
 [ext_resource path="res://scripts/shopmenu.gd" type="Script" id=5]
-[ext_resource path="res://assets/UI Player/CORACAO.png" type="Texture" id=6]
+[ext_resource path="res://assets/Item/Regador.png" type="Texture" id=6]
 [ext_resource path="res://assets/UI Player/Loja/Comprar verde.png" type="Texture" id=7]
 [ext_resource path="res://tipografias/easvhs.ttf" type="DynamicFontData" id=8]
 
