@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://assets/Map/Tiny FOREST/tilemaps/autumn tilemap.png" type="Texture" id=1]
 [ext_resource path="res://assets/Map/Objetos/poste, cerca e cova.png" type="Texture" id=2]
@@ -1310,6 +1310,9 @@ extents = Vector2( 40.5798, 13.4056 )
 
 [sub_resource type="CircleShape2D" id=20]
 radius = 200.0
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 550, 187.5 )
 
 [sub_resource type="CircleShape2D" id=21]
 radius = 14.0357
@@ -5918,19 +5921,22 @@ shape = SubResource( 22 )
 [node name="NPC" type="YSort" parent="Ysort/Entidades"]
 
 [node name="Frank" type="Sprite" parent="Ysort/Entidades/NPC"]
-position = Vector2( 107, -149 )
-scale = Vector2( 0.08, 0.08 )
+position = Vector2( 153.96, -184.04 )
+scale = Vector2( 0.07, 0.07 )
 texture = ExtResource( 10 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="Ysort/Entidades/NPC/Frank"]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/Entidades/NPC/Frank/KinematicBody2D"]
 position = Vector2( 100, 112.5 )
 shape = SubResource( 20 )
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ysort/Entidades/NPC/Frank/KinematicBody2D"]
+position = Vector2( 100.5, 263 )
+shape = SubResource( 23 )
+
 [node name="buyzone" parent="Ysort/Entidades/NPC/Frank" instance=ExtResource( 18 )]
-position = Vector2( 100, 137.5 )
+position = Vector2( 87.5, -75 )
 scale = Vector2( 12.5, 12.5 )
 
 [node name="Player" parent="Ysort/Entidades" instance=ExtResource( 12 )]
@@ -5978,7 +5984,7 @@ volume_db = 11.361
 autoplay = true
 
 [node name="semente_de_guarana" parent="." instance=ExtResource( 13 )]
-position = Vector2( 113, -86 )
+position = Vector2( 161, -171 )
 
 [node name="enter_casinha" type="Area2D" parent="."]
 position = Vector2( 0, -202 )
@@ -6001,10 +6007,10 @@ position = Vector2( -13, 77 )
 modulate = Color( 0, 0, 0, 0 )
 self_modulate = Color( 1, 1, 1, 0 )
 show_behind_parent = true
-margin_left = 102.0
-margin_top = -180.0
-margin_right = 130.0
-margin_bottom = -125.0
+margin_left = 147.96
+margin_top = -216.04
+margin_right = 175.96
+margin_bottom = -179.04
 mouse_default_cursor_shape = 2
 
 [connection signal="pressed" from="UserInterface/pause/Exit Game" to="." method="_on_Exit_Game_pressed"]
