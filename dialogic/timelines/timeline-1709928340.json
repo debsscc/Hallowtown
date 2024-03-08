@@ -24,7 +24,19 @@
 			"character": "character-1708448484.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Bom ver você denovo. \nNa sua cama é onde você salva o jogo a cada noite que passa. "
+			"text": "Bom ver você denovo. \nNa sua cama é onde você salva o jogo a cada noite que passa.\nEspero que tenha tido uma boa apresentação do mundo. \nVocê viu a torneira? \nPois é... tem coisas estranhas acontecendo por este mundo.\nConto com você para descobrir."
+		},
+		{
+			"character": "character-1708450426.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Cabeça de Abóbora acende com a cabeça."
+		},
+		{
+			"character": "character-1708448484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Agora descanse, tenho uma longa lista de afazeres para você amanhã."
 		}
 	],
 	"metadata": {

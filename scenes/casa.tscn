@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://assets/BRUNO/INTERIOR CASA.png" type="Texture" id=1]
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
@@ -6,9 +6,6 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 34.375, 11 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 58.5, 26.5 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 39.5, 10.5 )
@@ -30,6 +27,9 @@ extents = Vector2( 3, 12.5 )
 
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 13, 5.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 58.5, 26.5 )
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 12.5, 11 )
@@ -55,6 +55,9 @@ radius = 19.105
 [sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 38, 10 )
 
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 47, 29.5 )
+
 [node name="casa" type="Node2D"]
 script = ExtResource( 3 )
 
@@ -68,10 +71,6 @@ texture = ExtResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 position = Vector2( -81.375, 116 )
 shape = SubResource( 1 )
-
-[node name="cama" type="CollisionShape2D" parent="KinematicBody2D"]
-position = Vector2( -168.5, 81.5 )
-shape = SubResource( 2 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="KinematicBody2D"]
 position = Vector2( 63.5, 115.5 )
@@ -100,6 +99,10 @@ shape = SubResource( 10 )
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="KinematicBody2D"]
 position = Vector2( -214, 52.5 )
 shape = SubResource( 9 )
+
+[node name="cama" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( -168.5, 81.5 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="KinematicBody2D"]
 position = Vector2( 230, 34 )
@@ -146,6 +149,13 @@ shape = SubResource( 16 )
 position = Vector2( -162, -3 )
 shape = SubResource( 17 )
 
+[node name="cama" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cama"]
+position = Vector2( -153, 78.5 )
+shape = SubResource( 18 )
+
 [connection signal="body_entered" from="exit_casinha" to="." method="_on_exit_casinha_body_entered"]
 [connection signal="body_entered" from="torneira" to="." method="_on_torneira_body_entered"]
 [connection signal="body_entered" from="escadas" to="." method="_on_escadas_body_entered"]
+[connection signal="body_entered" from="cama" to="." method="_on_cama_body_entered"]
