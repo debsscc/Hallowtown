@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Map/Objetos/arvores.png" type="Texture" id=3]
 [ext_resource path="res://Audio/forest.mp3" type="AudioStream" id=4]
-[ext_resource path="res://Characters/DonaMorte.png" type="Texture" id=5]
+[ext_resource path="res://Characters/DonaMorte/DonaMorte.png" type="Texture" id=5]
 [ext_resource path="res://assets/Plants/abóbora3.png" type="Texture" id=6]
 [ext_resource path="res://assets/UI Player/PAUSE.png" type="Texture" id=7]
 [ext_resource path="res://scripts/userinterface.gd" type="Script" id=8]
@@ -1311,8 +1311,8 @@ extents = Vector2( 42, 36 )
 extents = Vector2( 10, 5.5 )
 
 [sub_resource type="CapsuleShape2D" id=12]
-radius = 10.685
-height = 30.6299
+radius = 20.009
+height = 56.9025
 
 [sub_resource type="CircleShape2D" id=19]
 radius = 20.0
@@ -14529,6 +14529,7 @@ shape = SubResource( 15 )
 [node name="NPC" type="YSort" parent="Ysort/Entidades"]
 
 [node name="Player" parent="Ysort/Entidades/NPC" instance=ExtResource( 2 )]
+visible = false
 position = Vector2( 0, -55 )
 
 [node name="UserInterface" type="CanvasLayer" parent="."]
@@ -14561,18 +14562,18 @@ mouse_default_cursor_shape = 2
 [node name="dia_e_noite" parent="." instance=ExtResource( 10 )]
 
 [node name="Dona Morte" type="Sprite" parent="."]
-position = Vector2( 64, -65 )
-scale = Vector2( 0.1125, 0.1125 )
+position = Vector2( 72.5, -50.5044 )
+scale = Vector2( 0.0715746, 0.0715746 )
 texture = ExtResource( 5 )
 
 [node name="Dona_Morte" type="KinematicBody2D" parent="Dona Morte"]
-position = Vector2( -586.667, 577.778 )
+position = Vector2( -3.2146, 32.6332 )
 scale = Vector2( 8.88889, 8.88889 )
 collision_layer = 2
 collision_mask = 13
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dona Morte/Dona_Morte"]
-position = Vector2( 65, -67 )
+position = Vector2( 7.62939e-06, 0 )
 shape = SubResource( 12 )
 
 [node name="Botão_dialogo" type="Button" parent="Dona Morte/Dona_Morte"]
@@ -14598,6 +14599,12 @@ position = Vector2( 0, -498 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enter_farm"]
 shape = SubResource( 19 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_left = -13.0
+margin_top = -11.0
+margin_right = 13.0
+margin_bottom = 21.0
 
 [connection signal="pressed" from="UserInterface/pause/Exit Game" to="." method="_on_Exit_Game_pressed"]
 [connection signal="pressed" from="UserInterface/pause/Resume" to="." method="_on_Resume_pressed"]
