@@ -2,21 +2,21 @@
 
 [ext_resource path="res://assets/UI Player/Loja/Seta.png" type="Texture" id=1]
 [ext_resource path="res://assets/UI Player/Loja/Comprar vermelho.png" type="Texture" id=2]
-[ext_resource path="res://assets/Item/Guarana Seed.png" type="Texture" id=3]
+[ext_resource path="res://assets/Item/Guarana semente.png" type="Texture" id=3]
 [ext_resource path="res://assets/Item/MOEDA.png" type="Texture" id=4]
 [ext_resource path="res://scripts/shopmenu.gd" type="Script" id=5]
-[ext_resource path="res://assets/Item/Regador.png" type="Texture" id=6]
+[ext_resource path="res://assets/Item/Abobora semente.png" type="Texture" id=6]
 [ext_resource path="res://assets/UI Player/Loja/Comprar verde.png" type="Texture" id=7]
 [ext_resource path="res://tipografias/easvhs.ttf" type="DynamicFontData" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 3 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": true,
 "name": "aboboraseed",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "coracaoseed",
 "speed": 5.0
@@ -48,6 +48,7 @@ color = Color( 0, 0, 0, 0.196078 )
 
 [node name="itemicon" type="AnimatedSprite" parent="."]
 position = Vector2( 20, 11 )
+scale = Vector2( 0.028, 0.028 )
 frames = SubResource( 1 )
 animation = "aboboraseed"
 

@@ -6,7 +6,7 @@ var price
 
 #preços dos itens
 var item1price = 100
-var item2price = 150
+var item2price = 999
 
 #guarda se possui ou nao o item
 var item1owned = false
@@ -30,7 +30,7 @@ func _physics_process(delta):
 				$buyicon.play("cannotbuy")
 		if item == 2:
 			$itemicon.play("coracaoseed")
-			$price.text = "x150"
+			$price.text = "x999"
 			if Global.coins >= item2price:
 				if item2owned == false:
 					$buyicon.play("canbuy")
