@@ -73,7 +73,7 @@
 			"z_index": 0
 		},
 		{
-			"character": "",
+			"character": "character-1709864420.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Ah claro, entendi. Você é novo aqui.\nQual seu nome?"
@@ -100,7 +100,7 @@
 			"character": "character-1709864420.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Você achou que fosse o único a ter uma esfera? Hahaha\nElas têm várias funcionalidades, e uma delas é a comunicação entre esferas. Sempre que você aproximar sua de alguma outra, elas ficarão conectadas.\nAs nossas esferas já devem estar conectadas. \nAperte E para visualizar.\n... Bom\nEnfim, a Dona me disse que você possivelmente cuidou de uma fazenda durante sua vida…"
+			"text": "Você achou que fosse o único a ter uma esfera? Hahaha\nElas têm várias funcionalidades, e uma delas é a comunicação entre esferas. Sempre que você aproximar sua de alguma outra, elas ficarão conectadas.\nAs nossas esferas já devem estar conectadas. \n... Bom\nEnfim, a Dona me disse que você possivelmente cuidou de uma fazenda durante sua vida…"
 		},
 		{
 			"character": "character-1708450426.json",

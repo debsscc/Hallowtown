@@ -3,6 +3,7 @@ extends Control
 onready var video_introducao = $"Introducao-Abobora"
 onready var audio_introducao = $AudioStreamPlayer
 
+
 func _ready():
 	video_introducao.hide()
 	video_introducao.stop()
