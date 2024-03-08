@@ -1,0 +1,21 @@
+{
+	"color": "#ff8b966f",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1709864420.json",
+	"mirror_portraits": false,
+	"name": "Frank",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 100,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Characters/Frank/64 frank.png"
+		}
+	],
+	"scale": 50,
+	"theme": ""
+}

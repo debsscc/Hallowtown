@@ -32,3 +32,14 @@ func _on_Resume_pressed():
 func _on_exit_farm_body_entered(body):
 	if body.has_method("player_exit_method"):
 		get_tree().change_scene("res://scenes/main.tscn")
+
+
+func _on_Dialogo_frank_pressed():
+	var dialogoFrank = Dialogic.start('frankie')
+	add_child(dialogoFrank)
+
+
+
+func _on_casinha_body_entered(body):
+	if body.has_method("player_exit_method"):
+		get_tree().change_scene("res://scenes/casa.tscn")

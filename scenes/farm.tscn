@@ -1,8 +1,9 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://assets/Map/Tiny FOREST/tilemaps/autumn tilemap.png" type="Texture" id=1]
 [ext_resource path="res://assets/Map/Objetos/poste, cerca e cova.png" type="Texture" id=2]
-[ext_resource path="res://assets/Item/casa hallowtown png.png" type="Texture" id=3]
+[ext_resource path="res://assets/BRUNO/CASA.png" type="Texture" id=3]
+[ext_resource path="res://scenes/dia_e_noite.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scripts/userinterface.gd" type="Script" id=5]
 [ext_resource path="res://assets/UI Player/PAUSE.png" type="Texture" id=6]
 [ext_resource path="res://assets/Map/Objetos/arvores.png" type="Texture" id=7]
@@ -1300,10 +1301,13 @@ extents = Vector2( 151, 1 )
 extents = Vector2( 176, 1.5 )
 
 [sub_resource type="RectangleShape2D" id=15]
-extents = Vector2( 42, 36 )
+extents = Vector2( 55.5942, 21.7029 )
 
 [sub_resource type="CircleShape2D" id=20]
 radius = 200.0
+
+[sub_resource type="CircleShape2D" id=21]
+radius = 14.0357
 
 [sub_resource type="CapsuleShape2D" id=19]
 radius = 20.0
@@ -5698,7 +5702,8 @@ position = Vector2( -128, -48 )
 [node name="Locais" type="YSort" parent="Ysort"]
 
 [node name="Casa" type="Sprite" parent="Ysort/Locais"]
-position = Vector2( 0, -231 )
+position = Vector2( 0, -238.679 )
+scale = Vector2( 1.23214, 1.23214 )
 texture = ExtResource( 3 )
 
 [node name="Checkpoint" type="KinematicBody2D" parent="Ysort/Locais/Casa"]
@@ -5706,7 +5711,8 @@ position = Vector2( 0, 6 )
 collision_layer = 4
 collision_mask = 27
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/Locais/Casa/Checkpoint"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ysort/Locais/Casa"]
+position = Vector2( 0, 18.4058 )
 shape = SubResource( 15 )
 
 [node name="Entidades" type="YSort" parent="Ysort"]
@@ -5769,12 +5775,33 @@ autoplay = true
 [node name="semente_de_guarana" parent="." instance=ExtResource( 13 )]
 position = Vector2( 89, -152 )
 
+[node name="casinha" type="Area2D" parent="."]
+position = Vector2( 0, -202 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="casinha"]
+shape = SubResource( 21 )
+
 [node name="exit_farm" type="Area2D" parent="."]
 position = Vector2( 0, 74 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="exit_farm"]
 shape = SubResource( 19 )
 
+[node name="dia_e_noite" parent="." instance=ExtResource( 4 )]
+position = Vector2( -13, 77 )
+
+[node name="Dialogo_frank" type="Button" parent="."]
+modulate = Color( 0, 0, 0, 0 )
+self_modulate = Color( 1, 1, 1, 0 )
+show_behind_parent = true
+margin_left = 102.0
+margin_top = -180.0
+margin_right = 130.0
+margin_bottom = -125.0
+mouse_default_cursor_shape = 2
+
 [connection signal="pressed" from="UserInterface/pause/Exit Game" to="." method="_on_Exit_Game_pressed"]
 [connection signal="pressed" from="UserInterface/pause/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="body_entered" from="casinha" to="." method="_on_casinha_body_entered"]
 [connection signal="body_entered" from="exit_farm" to="." method="_on_exit_farm_body_entered"]
+[connection signal="pressed" from="Dialogo_frank" to="." method="_on_Dialogo_frank_pressed"]

@@ -4,34 +4,20 @@ onready var backgroundSound = $som_background
 onready var audio_donaMorte = $Dona_MorteSFX
 onready var regando = $Ysort/Entidades/Player/AnimatedSprite
 onready var ui = $UserInterface/player_ui
-var donaMorteSoundPlayed = false  # Variável para controlar se o som já foi reproduzido
-
+onready var introducao_video = $VideoINT
 
 var pause = pause
 var isPaused = false #Variavel que rastreia se o jogo ta pausado
 
 
 func _ready():
+	introducao_video.play()
 	pause = $UserInterface/pause
 	pause.hide()
 	ui.hide()
 
 	if Input.is_action_just_pressed("regando"):
 		$AnimatedSprite.play("rega_down")
-
-
-#func _on_Dona_Morte_body_entered(body):
-#	print("Body entered")
-#	if body == $Player and not donaMorteSoundPlayed:  
-#		# Verifica se o corpo que entrou na área é o jogador e se o som ainda não foi reproduzido
-#
-#		if audio_donaMorte and not audio_donaMorte.is_playing():  
-#			# Verifica se a referência do nó AudioPlayer é válida e se o áudio não está sendo reproduzido
-#			audio_donaMorte.play()
-#			donaMorteSoundPlayed = true
-#func _on_Dona_MorteSFX_finished():
-#	audio_donaMorte.stop()
-
 
 func _process(delta):
 	# Verifica se o jogo não está pausado
@@ -63,3 +49,7 @@ func _on_Boto_dialogo_pressed():
 func _on_enter_farm_body_entered(body):
 	if body.has_method("player_enter_method"):
 		get_tree().change_scene("res://scenes/farm.tscn")
+
+
+func _on_VideoINT_finished():
+	introducao_video.hide()
