@@ -3,7 +3,9 @@ extends Node2D
 onready var backgroundSound = $som_background
 onready var audio_donaMorte = $Dona_MorteSFX
 onready var regando = $Ysort/Entidades/Player/AnimatedSprite
+onready var ui = $UserInterface/player_ui
 var donaMorteSoundPlayed = false  # Variável para controlar se o som já foi reproduzido
+
 
 var pause = pause
 var isPaused = false #Variavel que rastreia se o jogo ta pausado
@@ -12,6 +14,7 @@ var isPaused = false #Variavel que rastreia se o jogo ta pausado
 func _ready():
 	pause = $UserInterface/pause
 	pause.hide()
+	ui.hide()
 
 	if Input.is_action_just_pressed("regando"):
 		$AnimatedSprite.play("rega_down")
@@ -55,7 +58,7 @@ func _on_Resume_pressed():
 func _on_Boto_dialogo_pressed():
 		var dialogo_DonaMortee = Dialogic.start('timeline1')
 		add_child(dialogo_DonaMortee)
-
+		ui.show()
 
 func _on_enter_farm_body_entered(body):
 	if body.has_method("player_enter_method"):

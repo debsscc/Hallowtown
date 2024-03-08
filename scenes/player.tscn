@@ -781,7 +781,6 @@ script = ExtResource( 2 )
 position = Vector2( 8, -3.57628e-07 )
 frames = SubResource( 56 )
 animation = "dir"
-frame = 8
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -790,7 +789,7 @@ shape = SubResource( 43 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 0.5, 0.5 )
+zoom = Vector2( 0.35, 0.35 )
 limit_left = -1632
 limit_top = -992
 limit_right = 1632
