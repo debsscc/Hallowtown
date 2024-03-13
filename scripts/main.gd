@@ -33,8 +33,6 @@ func _process(delta):
 			backgroundSound.stop()
 			isPaused = true  # Define a variável para true quando o jogo está pausado
 			ui.hide()
-			var dialogo_DonaMorte = Dialogic.start('timeline1')
-			dialogo_DonaMorte.stop()
 
 func _on_Exit_Game_pressed():
 	get_tree().change_scene("res://scenes/menu.tscn")
@@ -64,7 +62,8 @@ func _on_tutorial_button_pressed():
 	pause.hide()
 	tutorial_video.show()
 	tutorial_video.play()
-
+	
 
 func _on_tutorial_video_finished():
+	tutorial_video.hide()
 	pause.show()

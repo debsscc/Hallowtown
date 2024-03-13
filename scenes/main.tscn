@@ -13834,40 +13834,40 @@ stream = ExtResource( 7 )
 
 [node name="pause" type="Sprite" parent="UserInterface"]
 show_behind_parent = true
-position = Vector2( 656, 368 )
+position = Vector2( 632, 368 )
 scale = Vector2( 0.257794, 0.258764 )
 texture = ExtResource( 6 )
 
 [node name="ColorRect" type="ColorRect" parent="UserInterface/pause"]
 modulate = Color( 1, 1, 1, 0.427451 )
 show_behind_parent = true
-margin_left = -2544.0
+margin_left = -2450.9
 margin_top = -1419.0
-margin_right = 2421.0
+margin_right = 2514.1
 margin_bottom = 1360.0
 color = Color( 0, 0, 0, 0.694118 )
 
 [node name="Resume" type="Button" parent="UserInterface/pause/ColorRect"]
 show_behind_parent = true
-margin_left = 1737.0
-margin_top = 1203.0
-margin_right = 3351.0
-margin_bottom = 1512.0
+margin_left = 1644.06
+margin_top = 1202.59
+margin_right = 3258.06
+margin_bottom = 1511.59
 mouse_default_cursor_shape = 2
 
 [node name="Exit Game" type="Button" parent="UserInterface/pause/ColorRect"]
 show_behind_parent = true
-margin_left = 1737.0
-margin_top = 2006.0
-margin_right = 3351.0
-margin_bottom = 2316.0
+margin_left = 1644.06
+margin_top = 2006.41
+margin_right = 3258.06
+margin_bottom = 2316.41
 mouse_default_cursor_shape = 2
 
 [node name="tutorial_button" type="Button" parent="UserInterface/pause/ColorRect"]
-margin_left = 1737.0
-margin_top = 1604.0
-margin_right = 3351.0
-margin_bottom = 1914.0
+margin_left = 1644.06
+margin_top = 1604.5
+margin_right = 3258.06
+margin_bottom = 1914.5
 mouse_default_cursor_shape = 2
 
 [node name="player_ui" parent="UserInterface" instance=ExtResource( 9 )]
