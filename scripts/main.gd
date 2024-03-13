@@ -5,12 +5,15 @@ onready var audio_donaMorte = $Dona_MorteSFX
 onready var regando = $Ysort/Entidades/Player/AnimatedSprite
 onready var ui = $UserInterface/player_ui
 onready var introducao_video = $VideoINT
+onready var tutorial_video = $UserInterface/tutorial_video
 
 var pause = pause
 var isPaused = false #Variavel que rastreia se o jogo ta pausado
 
 
 func _ready():
+	tutorial_video.hide()
+	tutorial_video.stop()
 	pause = $UserInterface/pause
 	pause.hide()
 	ui.hide()
@@ -56,3 +59,12 @@ func _on_enter_farm_body_entered(body):
 
 func _on_VideoINT_finished():
 	introducao_video.hide()
+
+func _on_tutorial_button_pressed():
+	pause.hide()
+	tutorial_video.show()
+	tutorial_video.play()
+
+
+func _on_tutorial_video_finished():
+	pause.show()
