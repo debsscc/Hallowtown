@@ -13827,7 +13827,6 @@ position = Vector2( 0, 2 )
 script = ExtResource( 8 )
 
 [node name="pause" type="Sprite" parent="UserInterface"]
-visible = false
 modulate = Color( 1, 1, 1, 0.839216 )
 self_modulate = Color( 1, 1, 1, 0.843137 )
 position = Vector2( 639, 362 )

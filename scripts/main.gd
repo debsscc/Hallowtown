@@ -29,6 +29,9 @@ func _process(delta):
 			pause.show()
 			backgroundSound.stop()
 			isPaused = true  # Define a variável para true quando o jogo está pausado
+			ui.hide()
+			var dialogo_DonaMorte = Dialogic.start('timeline1')
+			dialogo_DonaMorte.stop()
 
 func _on_Exit_Game_pressed():
 	get_tree().change_scene("res://scenes/menu.tscn")
@@ -37,6 +40,7 @@ func _on_Resume_pressed():
 	pause.hide()
 	backgroundSound.play()
 	isPaused = false  # Define a variável para false quando o jogo é retomado
+	ui.show()
 
 
 
