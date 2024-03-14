@@ -806,8 +806,9 @@ animations = [ {
 "speed": 8.0
 } ]
 
-[sub_resource type="CircleShape2D" id=325]
-radius = 6.0
+[sub_resource type="CapsuleShape2D" id=325]
+radius = 4.0
+height = 10.0
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 14
@@ -816,20 +817,21 @@ script = ExtResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 56 )
 animation = "down"
-frame = 7
+frame = 11
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.5, 6 )
+position = Vector2( 0, 9 )
+rotation = 1.5708
 shape = SubResource( 325 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 0.35, 0.35 )
-limit_left = -1632
-limit_top = -992
-limit_right = 1632
-limit_bottom = 992
+limit_left = -592
+limit_top = -400
+limit_right = 592
+limit_bottom = 400
 editor_draw_limits = true
 
 [node name="Som_caminhada" type="AudioStreamPlayer2D" parent="."]

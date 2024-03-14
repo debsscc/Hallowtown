@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Decorations1.png-5b1b31a67fbb33a526fd7484c548140e.stex"
+path="res://.import/tileset.png-c4accf7de8f4b0ff7198af49019e7d4e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Map/PixelWoods/Decorations1.png"
-dest_files=[ "res://.import/Decorations1.png-5b1b31a67fbb33a526fd7484c548140e.stex" ]
+source_file="res://assets/Map/Tileset/tileset.png"
+dest_files=[ "res://.import/tileset.png-c4accf7de8f4b0ff7198af49019e7d4e.stex" ]
 
 [params]
 

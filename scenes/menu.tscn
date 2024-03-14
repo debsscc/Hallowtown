@@ -23,12 +23,14 @@ stream = ExtResource( 1 )
 autoplay = true
 
 [node name="Introducao-Abobora" type="VideoPlayer" parent="."]
+visible = false
 margin_right = 1283.0
 margin_bottom = 723.0
 stream = ExtResource( 4 )
 volume_db = -20.25
 
 [node name="tutorial" type="VideoPlayer" parent="."]
+visible = false
 margin_right = 1285.0
 margin_bottom = 725.0
 stream = ExtResource( 5 )

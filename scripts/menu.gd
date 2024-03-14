@@ -21,6 +21,7 @@ func _on_Button_pressed():
 	$Button.hide()
 
 func _on_IntroducaoAbobora_finished():
+	tutorial.show()
 	tutorial.play()
 
 func _on_tutorial_finished():

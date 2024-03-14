@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/barraquinha.png-f0bd016a78a6d38ffe7822798f28679f.stex"
+path="res://.import/Barraca Frank.png-fe2e5b963543c88be38a57941b279dcb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Map/barraquinha.png"
-dest_files=[ "res://.import/barraquinha.png-f0bd016a78a6d38ffe7822798f28679f.stex" ]
+source_file="res://assets/Map/Barraca Frank.png"
+dest_files=[ "res://.import/Barraca Frank.png-fe2e5b963543c88be38a57941b279dcb.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/decorations_antumn.png-bb0ca7158b3dd49c2a4616bd2f5318f3.stex"
+path="res://.import/turnaround frank.png-70ea0422c75e07db7e1acb7b2af31d4e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Map/PixelWoods/decorations_antumn.png"
-dest_files=[ "res://.import/decorations_antumn.png-bb0ca7158b3dd49c2a4616bd2f5318f3.stex" ]
+source_file="res://Characters/Frank/turnaround frank.png"
+dest_files=[ "res://.import/turnaround frank.png-70ea0422c75e07db7e1acb7b2af31d4e.stex" ]
 
 [params]
 
