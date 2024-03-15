@@ -817,7 +817,7 @@ script = ExtResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 56 )
 animation = "down"
-frame = 11
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -829,7 +829,7 @@ shape = SubResource( 325 )
 current = true
 zoom = Vector2( 0.35, 0.35 )
 limit_left = -592
-limit_top = -400
+limit_top = -398
 limit_right = 592
 limit_bottom = 400
 editor_draw_limits = true

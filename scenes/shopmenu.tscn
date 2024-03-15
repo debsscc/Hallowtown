@@ -18,7 +18,7 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
-"name": "coracaoseed",
+"name": "regador",
 "speed": 5.0
 } ]
 

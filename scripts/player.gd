@@ -8,6 +8,8 @@ onready var lastDirection: Vector2 = Vector2.ZERO #Variavel para verificar a ult
 #var isWatering = false  # Variável para rastrear se o jogador está regando
 
 onready var movementSound = $Som_caminhada
+func _ready():
+	pass
 
 func get_animation_from_direction(direction: Vector2) -> String:
 	if direction.y < 0:

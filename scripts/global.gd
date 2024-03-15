@@ -9,5 +9,15 @@ var numofaboboras = 0
 #moedas do jogador
 var coins = 0
 
-func _ready():
-	pass
+var posicao_do_jogador = 0
+
+#func ready():
+#	var pposition = Vector2(0,5)
+#	if posicao_do_jogador == 1: #main para fazenda
+#		pposition = Vector2(0, 340)
+#	elif posicao_do_jogador == 2: #fazenda para main
+#		pposition = Vector2(0, -340)
+#	elif posicao_do_jogador == 3: #fazenda para casa
+#		pposition = Vector2(0, 100)
+#	elif posicao_do_jogador == 4: #casa para fazenda
+#		pposition = Vector2(0, -140)

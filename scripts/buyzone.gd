@@ -4,7 +4,7 @@ func _ready():
 	$shopmenu.visible = false
 
 func _process(delta):
-	if $shopmenu.item1owned == true:
+	if $shopmenu.itemowned[0] == true:
 		$semente_de_abobora. visible = true
 
 func _on_Area2D_body_entered(body):

@@ -9,8 +9,8 @@ func _on_Area2D_body_entered(body):
 		
 		#moedas a serem adicionadas após a venda
 		#abobora = 10 | guarana = 15 coins
-		coins += abobora*10
-		coins += guarana*15
+		coins += abobora*3
+		coins += guarana*6
 		
 		#zerar os itens vendidos
 		abobora = 0

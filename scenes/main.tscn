@@ -12439,7 +12439,7 @@ position = Vector2( 0.361649, 4.76625 )
 stream = ExtResource( 28 )
 
 [node name="Player" parent="Ysort/Entidades" instance=ExtResource( 2 )]
-position = Vector2( 0, 2 )
+position = Vector2( 0, 5 )
 
 [node name="UserInterface" type="CanvasLayer" parent="."]
 visible = false
